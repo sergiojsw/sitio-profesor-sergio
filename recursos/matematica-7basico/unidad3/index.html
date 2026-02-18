@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 3: Álgebra - Matemática 7° Básico</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .multimedia-item { background: #f8f9fa; border-radius: 8px; padding: 1rem; margin-bottom: 0.5rem; }
+        .activity-row { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem; border-bottom: 1px solid #eee; }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container py-4">
+        <div class="d-flex align-items-center mb-4">
+            <a href="../../../cursos/matematica-7basico.html" class="btn btn-success me-3"><i class="bi bi-arrow-left"></i></a>
+            <div>
+                <h2 class="mb-0 text-success"><i class="bi bi-3-circle me-2"></i>Unidad 3: Álgebra</h2>
+                <p class="text-muted mb-0">Matemática 7° Básico - Todos los recursos</p>
+            </div>
+        </div>
+        <div class="row g-3 mb-4">
+            <div class="col-6 col-md-3"><div class="card text-center border-success"><div class="card-body py-3"><i class="bi bi-file-earmark-text text-success display-6"></i><h3 class="mb-0" id="count-guias">-</h3><small class="text-muted">Guías</small></div></div></div>
+            <div class="col-6 col-md-3"><div class="card text-center border-primary"><div class="card-body py-3"><i class="bi bi-check2-circle text-primary display-6"></i><h3 class="mb-0" id="count-sol">-</h3><small class="text-muted">Solucionarios</small></div></div></div>
+            <div class="col-6 col-md-3"><div class="card text-center border-danger"><div class="card-body py-3"><i class="bi bi-play-circle text-danger display-6"></i><h3 class="mb-0" id="count-vid">-</h3><small class="text-muted">Videos</small></div></div></div>
+            <div class="col-6 col-md-3"><div class="card text-center border-info"><div class="card-body py-3"><i class="bi bi-laptop text-info display-6"></i><h3 class="mb-0" id="count-apps">-</h3><small class="text-muted">Apps</small></div></div></div>
+        </div>
+        <div class="card mb-4"><div class="card-header bg-danger text-white"><h5 class="mb-0"><i class="bi bi-collection-play me-2"></i>Recursos Multimedia</h5></div><div class="card-body"><div class="row" id="multimedia-content"></div></div></div>
+        <div class="card"><div class="card-header bg-success text-white d-flex justify-content-between align-items-center"><h5 class="mb-0"><i class="bi bi-journal-text me-2"></i>Guías y Solucionarios</h5><input type="text" class="form-control form-control-sm w-auto" placeholder="Buscar..." id="search-input"></div><div class="card-body p-0"><div class="list-group list-group-flush" id="guias-list"></div></div></div>
+    </div>
+    <script>
+        const guias = ["01_Plano_cartesiano.pdf","02_Vectores.pdf.pdf","03_Circunferencia_circulo_elementos.pdf","04_El_numero_pi.pdf","05_Perimetro_circunferencia.pdf.pdf","06_Descubriendo_area_circulo.pdf","07_Area_circulo.pdf.pdf","08_Rectas_paralelas_perpendiculares.pdf","09_Arte_paralelas_perpendiculares.pdf","10_Congruencia.pdf","11_Taller_Construyamos_triangulos.pdf","12_Triangulos_congruentes.pdf","13_Taller_Construyamos_cuadrilateros.pdf.pdf","14_Cuadrilateros_congruentes.pdf","15_Punto_medio_segmento.pdf","16_Simetral_o_mediatriz.pdf","17_Bisectriz.pdf","18_Bicetrices_en_Geogebra.pdf","19_Incentro_y_bisectrices.pdf","20_Construccion de alturas.pdf","21_Ortocentro_y_alturas.pdf","22_Construccion_de_transversales.pdf","23_Taller_equilibremos_triangulos.pdf","24_Baricentro_y_transversales.pdf"];
+        const videos = ["01_Video1_CosmovisionMapuche.mp4","02_Video2_Pi.mp4","03_Video3_AreaCirculo.mp4"];
+        const apps = ["01_App01_MapasMentales.html"];
+        document.getElementById('count-guias').textContent = guias.length;
+        document.getElementById('count-sol').textContent = guias.length;
+        document.getElementById('count-vid').textContent = videos.length;
+        document.getElementById('count-apps').textContent = apps.length;
+        const mc = document.getElementById('multimedia-content');
+        let h = '';
+        if (videos.length) { h += '<div class="col-md-6"><h6 class="text-danger mb-3"><i class="bi bi-camera-video me-2"></i>Videos</h6>'; videos.forEach(v => { h += '<div class="multimedia-item d-flex justify-content-between align-items-center"><span><i class="bi bi-play-circle text-danger me-2"></i>'+v.replace('.mp4','').replace(/_/g,' ')+'</span><a href="videos/'+v+'" class="btn btn-sm btn-outline-danger" download><i class="bi bi-download"></i></a></div>'; }); h += '</div>'; }
+        if (apps.length) { h += '<div class="col-md-6"><h6 class="text-info mb-3"><i class="bi bi-laptop me-2"></i>Aplicaciones Interactivas</h6>'; apps.forEach(a => { h += '<div class="multimedia-item d-flex justify-content-between align-items-center"><span><i class="bi bi-laptop text-info me-2"></i>'+a.replace('.html','').replace(/_/g,' ')+'</span><a href="apps/'+a+'" class="btn btn-sm btn-outline-info"><i class="bi bi-play me-1"></i>Abrir</a></div>'; }); h += '</div>'; }
+        mc.innerHTML = h || '<p class="text-muted">No hay recursos multimedia.</p>';
+        const list = document.getElementById('guias-list');
+        guias.forEach(g => { 
+            const name = g.replace(/\.pdf$/i,'').replace(/\.pdf$/i,'').replace(/_/g,' '); 
+            const sol = g.replace(/\.pdf$/i,'').replace(/\.pdf$/i,'') + '_SOL.pdf';
+            list.innerHTML += '<div class="list-group-item activity-row" data-name="'+name.toLowerCase()+'"><div><strong>'+name+'</strong></div><div class="btn-group"><a href="guias/'+g+'" class="btn btn-sm btn-success" download><i class="bi bi-file-earmark-text me-1"></i>Guía</a><a href="solucionario/'+sol+'" class="btn btn-sm btn-outline-success" download><i class="bi bi-check2-circle me-1"></i>Solución</a></div></div>'; 
+        });
+        document.getElementById('search-input').addEventListener('input', e => { document.querySelectorAll('.activity-row').forEach(r => r.style.display = r.dataset.name.includes(e.target.value.toLowerCase()) ? '' : 'none'); });
+    </script>
+</body>
+</html>
