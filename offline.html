@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sin Conexion - Prof. Sergio Seguel</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        .offline-container {
+            text-align: center;
+            padding: 2rem;
+        }
+        .offline-icon {
+            font-size: 5rem;
+            color: #64748b;
+            margin-bottom: 1.5rem;
+        }
+        .retry-btn {
+            margin-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <div class="offline-icon">
+            <i class="bi bi-wifi-off"></i>
+        </div>
+        <h1 class="h3 mb-3">Sin conexion a Internet</h1>
+        <p class="text-muted mb-4">
+            No pudimos cargar esta pagina porque no tienes conexion.<br>
+            Verifica tu conexion e intenta de nuevo.
+        </p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <button onclick="window.location.reload()" class="btn btn-primary btn-lg">
+                <i class="bi bi-arrow-clockwise me-2"></i>Reintentar
+            </button>
+            <a href="/" class="btn btn-outline-secondary btn-lg">
+                <i class="bi bi-house me-2"></i>Ir al inicio
+            </a>
+        </div>
+        <p class="text-muted mt-4 small">
+            <i class="bi bi-info-circle me-1"></i>
+            Algunas paginas pueden estar disponibles offline si las visitaste antes.
+        </p>
+    </div>
+</body>
+</html>

@@ -3,15 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prof. Sergio Seguel - Recursos Educativos</title>
+    <title>Prof. Sergio Seguel - Recursos Educativos de Matemática</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Recursos educativos de Matemática para 7° Básico, 1° y 2° Medio. Actividades, guías, solucionarios y videos. Prof. Sergio Seguel, Liceo Ríos de Chile, Frutillar.">
+    <meta name="keywords" content="matemática, educación, Chile, 7 básico, 1 medio, 2 medio, actividades, guías, solucionarios, videos educativos, Frutillar">
+    <meta name="author" content="Prof. Sergio Seguel">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://profesergiojsw.rf.gd/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://profesergiojsw.rf.gd/">
+    <meta property="og:title" content="Prof. Sergio Seguel - Recursos Educativos de Matemática">
+    <meta property="og:description" content="Recursos educativos de Matemática para 7° Básico, 1° y 2° Medio. Actividades, guías, solucionarios y videos.">
+    <meta property="og:image" content="https://profesergiojsw.rf.gd/img/og-image.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Prof. Sergio Seguel - Recursos Educativos">
+    <meta name="twitter:description" content="Recursos de Matemática para estudiantes de 7° Básico a 2° Medio">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Prof. Sergio Seguel - Recursos Educativos",
+        "description": "Recursos educativos de Matemática para 7° Básico, 1° y 2° Medio",
+        "url": "https://profesergiojsw.rf.gd",
+        "sameAs": [],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Frutillar",
+            "addressRegion": "Los Lagos",
+            "addressCountry": "CL"
+        },
+        "member": {
+            "@type": "Person",
+            "name": "Sergio Seguel",
+            "jobTitle": "Profesor de Matemática",
+            "worksFor": {
+                "@type": "EducationalOrganization",
+                "name": "Liceo Ríos de Chile"
+            }
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Cursos de Matemática",
+            "itemListElement": [
+                {
+                    "@type": "Course",
+                    "name": "Matemática 7° Básico",
+                    "description": "79 guías de trabajo con solucionarios",
+                    "provider": {"@type": "Person", "name": "Prof. Sergio Seguel"}
+                },
+                {
+                    "@type": "Course",
+                    "name": "Matemática 1° Medio",
+                    "description": "161 actividades con solucionarios",
+                    "provider": {"@type": "Person", "name": "Prof. Sergio Seguel"}
+                },
+                {
+                    "@type": "Course",
+                    "name": "Matemática 2° Medio",
+                    "description": "161 actividades con solucionarios",
+                    "provider": {"@type": "Person", "name": "Prof. Sergio Seguel"}
+                }
+            ]
+        }
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+    <meta name="theme-color" content="#2563eb">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Prof. Sergio">
+
+    <!-- Preconnect para performance -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Skip Link para Accesibilidad -->
+    <a href="#main-content" class="visually-hidden-focusable position-absolute top-0 start-0 p-3 bg-primary text-white">
+        Saltar al contenido principal
+    </a>
+
     <!-- Navegación -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top" role="navigation" aria-label="Navegación principal">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
                 <i class="bi bi-mortarboard-fill me-2"></i>Prof. Sergio Seguel
@@ -38,14 +130,25 @@
                         <a class="nav-link" href="videos.html"><i class="bi bi-youtube me-1"></i>Videos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.html"><i class="bi bi-envelope me-1"></i>Contacto</a>
+                        <a class="nav-link" href="contacto.html"><i class="bi bi-envelope me-1" aria-hidden="true"></i>Contacto</a>
                     </li>
                 </ul>
+                <!-- Barra de búsqueda -->
+                <form class="d-none d-lg-flex ms-3" role="search" id="searchForm">
+                    <div class="input-group input-group-sm">
+                        <input type="search" class="form-control" placeholder="Buscar actividad..."
+                               aria-label="Buscar en el sitio" id="searchInput" style="width: 180px;">
+                        <button class="btn btn-light" type="submit" aria-label="Buscar">
+                            <i class="bi bi-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
+    <main id="main-content">
     <section class="hero-section">
         <div class="container">
             <div class="row align-items-center min-vh-75">
@@ -188,23 +291,162 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="bg-dark text-white py-5" role="contentinfo">
         <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="mb-3"><i class="bi bi-mortarboard-fill me-2" aria-hidden="true"></i>Prof. Sergio Seguel</h5>
+                    <p class="text-secondary mb-0">Docente de Matemática</p>
+                    <p class="text-secondary">Liceo Ríos de Chile, Frutillar</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="mb-3">Cursos</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="cursos/matematica-7basico.html" class="text-secondary text-decoration-none">Matemática 7° Básico</a></li>
+                        <li class="mb-2"><a href="cursos/matematica-1medio.html" class="text-secondary text-decoration-none">Matemática 1° Medio</a></li>
+                        <li class="mb-2"><a href="cursos/matematica-2medio.html" class="text-secondary text-decoration-none">Matemática 2° Medio</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="mb-3">Compartir</h6>
+                    <div class="share-buttons">
+                        <a href="https://wa.me/?text=Recursos%20educativos%20de%20Matem%C3%A1tica%20-%20Prof.%20Sergio%20Seguel%20https://profesergiojsw.rf.gd"
+                           class="share-btn whatsapp" target="_blank" rel="noopener" aria-label="Compartir en WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://profesergiojsw.rf.gd"
+                           class="share-btn facebook" target="_blank" rel="noopener" aria-label="Compartir en Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?text=Recursos%20educativos%20de%20Matem%C3%A1tica&url=https://profesergiojsw.rf.gd"
+                           class="share-btn twitter" target="_blank" rel="noopener" aria-label="Compartir en Twitter">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                        <a href="https://t.me/share/url?url=https://profesergiojsw.rf.gd&text=Recursos%20de%20Matem%C3%A1tica"
+                           class="share-btn telegram" target="_blank" rel="noopener" aria-label="Compartir en Telegram">
+                            <i class="bi bi-telegram"></i>
+                        </a>
+                        <button onclick="copyToClipboard()" class="share-btn copy" aria-label="Copiar enlace">
+                            <i class="bi bi-link-45deg"></i>
+                        </button>
+                    </div>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><a href="https://liceoriosdechile.com" class="text-secondary text-decoration-none" target="_blank" rel="noopener"><i class="bi bi-globe me-1" aria-hidden="true"></i>Sitio del Liceo</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p class="mb-0">
-                        <i class="bi bi-mortarboard-fill me-2"></i>
-                        Prof. Sergio Seguel - Liceo Ríos de Chile
-                    </p>
+                    <small class="text-secondary">Año Escolar 2026 - Todos los recursos son de uso educativo</small>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <small class="text-muted">Año Escolar 2026</small>
+                    <a href="#" class="text-secondary me-3" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" aria-label="Volver arriba">
+                        <i class="bi bi-arrow-up-circle" aria-hidden="true"></i> Volver arriba
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Modal de Búsqueda -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="searchModalLabel"><i class="bi bi-search me-2"></i>Buscar Recursos</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <input type="text" class="form-control form-control-lg" id="modalSearchInput"
+                               placeholder="Ej: potencias, función lineal, fracciones...">
+                    </div>
+                    <div id="searchResults" class="list-group">
+                        <p class="text-muted text-center py-3">Escribe para buscar actividades, guías o videos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Búsqueda Global -->
+    <script>
+        // Índice de búsqueda
+        const searchIndex = [
+            {title: 'Potencias - Unidad 1', url: 'recursos/matematica-1medio/unidad1/actividades/', tags: 'potencias exponentes base'},
+            {title: 'Función Lineal - Unidad 2', url: 'recursos/matematica-1medio/unidad2/actividades/', tags: 'función lineal pendiente gráfico'},
+            {title: 'Geometría - Unidad 3', url: 'recursos/matematica-1medio/unidad3/actividades/', tags: 'geometría transformaciones vectores'},
+            {title: 'Probabilidad - Unidad 4', url: 'recursos/matematica-1medio/unidad4/actividades/', tags: 'probabilidad estadística datos'},
+            {title: 'Números Enteros - 7° Básico', url: 'recursos/matematica-7basico/unidad1/guias/', tags: 'enteros negativos positivos'},
+            {title: 'Fracciones - 7° Básico', url: 'recursos/matematica-7basico/unidad1/guias/', tags: 'fracciones decimales división'},
+            {title: 'Geometría - 7° Básico', url: 'recursos/matematica-7basico/unidad3/guias/', tags: 'círculo área perímetro pi'},
+            {title: 'Videos 1° Medio', url: 'recursos/matematica-1medio/unidad1/videos/', tags: 'videos clases tutoriales'},
+            {title: 'Videos 7° Básico', url: 'recursos/matematica-7basico/unidad1/videos/', tags: 'videos pueblos originarios'},
+        ];
+
+        // Función de búsqueda
+        function performSearch(query) {
+            const results = document.getElementById('searchResults');
+            if (query.length < 2) {
+                results.innerHTML = '<p class="text-muted text-center py-3">Escribe al menos 2 caracteres</p>';
+                return;
+            }
+            const q = query.toLowerCase();
+            const matches = searchIndex.filter(item =>
+                item.title.toLowerCase().includes(q) || item.tags.includes(q)
+            );
+            if (matches.length === 0) {
+                results.innerHTML = '<p class="text-muted text-center py-3">No se encontraron resultados</p>';
+            } else {
+                results.innerHTML = matches.map(m =>
+                    `<a href="${m.url}" class="list-group-item list-group-item-action">
+                        <i class="bi bi-folder2-open me-2 text-primary"></i>${m.title}
+                    </a>`
+                ).join('');
+            }
+        }
+
+        // Event listeners
+        document.getElementById('searchForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const modal = new bootstrap.Modal(document.getElementById('searchModal'));
+            document.getElementById('modalSearchInput').value = document.getElementById('searchInput').value;
+            performSearch(document.getElementById('searchInput').value);
+            modal.show();
+        });
+
+        document.getElementById('modalSearchInput')?.addEventListener('input', function(e) {
+            performSearch(e.target.value);
+        });
+
+        // Copiar enlace al portapapeles
+        function copyToClipboard() {
+            navigator.clipboard.writeText('https://profesergiojsw.rf.gd').then(() => {
+                const btn = document.querySelector('.share-btn.copy');
+                const originalIcon = btn.innerHTML;
+                btn.innerHTML = '<i class="bi bi-check2"></i>';
+                btn.style.background = '#22c55e';
+                setTimeout(() => {
+                    btn.innerHTML = originalIcon;
+                    btn.style.background = '#374151';
+                }, 2000);
+            });
+        }
+
+        // Registrar Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('Service Worker registrado'))
+                    .catch(err => console.log('Error SW:', err));
+            });
+        }
+    </script>
 </body>
 </html>

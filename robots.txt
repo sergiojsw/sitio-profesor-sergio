@@ -1,0 +1,12 @@
+# Robots.txt para profesergiojsw.rf.gd
+# Prof. Sergio Seguel - Recursos Educativos
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://profesergiojsw.rf.gd/sitemap.xml
+
+# Archivos que no necesitan indexarse
+Disallow: /css/
+Disallow: /js/

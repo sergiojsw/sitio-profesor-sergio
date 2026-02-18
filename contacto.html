@@ -4,14 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Prof. Sergio Seguel</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Contacta al Prof. Sergio Seguel para consultas sobre matemática. Horario de atención y correo electrónico.">
+    <meta name="author" content="Prof. Sergio Seguel">
+    <link rel="canonical" href="https://profesergiojsw.rf.gd/contacto.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
+    <meta name="theme-color" content="#2563eb">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Prof. Sergio">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Skip Link para Accesibilidad -->
+    <a href="#main-content" class="visually-hidden-focusable position-absolute top-0 start-0 p-3 bg-primary text-white">
+        Saltar al contenido principal
+    </a>
+
     <!-- Navegación -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top" role="navigation" aria-label="Navegación principal">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
                 <i class="bi bi-mortarboard-fill me-2"></i>Prof. Sergio Seguel
@@ -38,6 +62,8 @@
         </div>
     </nav>
 
+    <!-- Contenido Principal -->
+    <main id="main-content">
     <!-- Header -->
     <section class="page-header bg-primary text-white py-5">
         <div class="container">
@@ -69,21 +95,14 @@
                                 <p class="text-muted">Docente de Matemática<br>Liceo Ríos de Chile</p>
                             </div>
 
-                            <div class="row g-4">
-                                <div class="col-md-6">
+                            <div class="row g-4 justify-content-center">
+                                <div class="col-md-8">
                                     <div class="contact-item text-center p-4 bg-light rounded">
                                         <i class="bi bi-envelope-fill text-primary display-5 mb-3"></i>
-                                        <h5>Correo Institucional</h5>
-                                        <a href="mailto:sergio.seguel@liceoriosdechile.com" class="text-decoration-none">
+                                        <h5>Correo Electrónico</h5>
+                                        <a href="mailto:sergio.seguel@liceoriosdechile.com" class="text-decoration-none fs-5">
                                             sergio.seguel@liceoriosdechile.com
                                         </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="contact-item text-center p-4 bg-light rounded">
-                                        <i class="bi bi-building text-primary display-5 mb-3"></i>
-                                        <h5>Establecimiento</h5>
-                                        <p class="mb-0">Liceo Ríos de Chile<br>Frutillar, Región de Los Lagos</p>
                                     </div>
                                 </div>
                             </div>
@@ -127,19 +146,43 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="bg-dark text-white py-5" role="contentinfo">
         <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="mb-3"><i class="bi bi-mortarboard-fill me-2" aria-hidden="true"></i>Prof. Sergio Seguel</h5>
+                    <p class="text-secondary mb-0">Docente de Matemática</p>
+                    <p class="text-secondary">Liceo Ríos de Chile, Frutillar</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="mb-3">Cursos</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="cursos/matematica-7basico.html" class="text-secondary text-decoration-none">Matemática 7° Básico</a></li>
+                        <li class="mb-2"><a href="cursos/matematica-1medio.html" class="text-secondary text-decoration-none">Matemática 1° Medio</a></li>
+                        <li class="mb-2"><a href="cursos/matematica-2medio.html" class="text-secondary text-decoration-none">Matemática 2° Medio</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="mb-3">Enlaces</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-secondary text-decoration-none"><i class="bi bi-house me-1" aria-hidden="true"></i>Inicio</a></li>
+                        <li class="mb-2"><a href="videos.html" class="text-secondary text-decoration-none"><i class="bi bi-youtube me-1" aria-hidden="true"></i>Videos</a></li>
+                        <li class="mb-2"><a href="https://liceoriosdechile.com" class="text-secondary text-decoration-none" target="_blank" rel="noopener"><i class="bi bi-globe me-1" aria-hidden="true"></i>Sitio del Liceo</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p class="mb-0">
-                        <i class="bi bi-mortarboard-fill me-2"></i>
-                        Prof. Sergio Seguel - Liceo Ríos de Chile
-                    </p>
+                    <small class="text-secondary">Año Escolar 2026 - Todos los recursos son de uso educativo</small>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <small class="text-muted">Año Escolar 2026</small>
+                    <a href="#" class="text-secondary me-3" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" aria-label="Volver arriba">
+                        <i class="bi bi-arrow-up-circle" aria-hidden="true"></i> Volver arriba
+                    </a>
                 </div>
             </div>
         </div>

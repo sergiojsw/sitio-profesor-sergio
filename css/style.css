@@ -349,3 +349,279 @@ body {
 .shadow-sm {
     box-shadow: 0 2px 10px rgba(0,0,0,0.08) !important;
 }
+
+/* ============================================ */
+/* ANIMACIONES                                 */
+/* ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Aplicar animaciones */
+.hero-section h1,
+.hero-section p,
+.hero-section .d-flex {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.hero-section h1 { animation-delay: 0.1s; }
+.hero-section p { animation-delay: 0.2s; }
+.hero-section .d-flex { animation-delay: 0.3s; }
+
+.hero-image {
+    animation: fadeIn 0.8s ease-out 0.4s both;
+}
+
+.course-card,
+.feature-box,
+.video-card {
+    animation: fadeInUp 0.5s ease-out both;
+}
+
+.course-card:nth-child(1) { animation-delay: 0.1s; }
+.course-card:nth-child(2) { animation-delay: 0.2s; }
+.course-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* Hover suave en links */
+a {
+    transition: color 0.2s ease;
+}
+
+/* Boton con efecto pulse al hover */
+.btn-primary:hover,
+.btn-success:hover {
+    animation: pulse 0.3s ease;
+}
+
+/* ============================================ */
+/* BOTONES DE COMPARTIR                        */
+/* ============================================ */
+.share-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.share-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.share-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    color: white;
+}
+
+.share-btn.whatsapp { background: #25D366; }
+.share-btn.facebook { background: #1877F2; }
+.share-btn.twitter { background: #1DA1F2; }
+.share-btn.telegram { background: #0088cc; }
+.share-btn.email { background: #6b7280; }
+.share-btn.copy { background: #374151; }
+
+/* ============================================ */
+/* ESTILOS DE IMPRESION                        */
+/* ============================================ */
+@media print {
+    /* Ocultar elementos innecesarios */
+    .navbar,
+    footer,
+    .btn,
+    .share-buttons,
+    .video-thumbnail,
+    .hero-image,
+    .breadcrumb,
+    #searchForm,
+    .visually-hidden-focusable {
+        display: none !important;
+    }
+
+    /* Reset de colores */
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt;
+    }
+
+    /* Headers en negro */
+    h1, h2, h3, h4, h5, h6 {
+        color: black !important;
+        page-break-after: avoid;
+    }
+
+    /* Cards sin sombras */
+    .card,
+    .course-card,
+    .feature-box,
+    .unit-card .card {
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+    }
+
+    /* Page headers simplificados */
+    .page-header {
+        background: none !important;
+        color: black !important;
+        padding: 20px 0 !important;
+        border-bottom: 2px solid black;
+    }
+
+    .page-header h1,
+    .page-header p {
+        color: black !important;
+    }
+
+    /* Hero section simplificada */
+    .hero-section {
+        background: none !important;
+        padding: 20px 0 !important;
+    }
+
+    /* Links con URL visible */
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: #666;
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript"]:after {
+        content: "";
+    }
+
+    /* Evitar cortes de pagina en medio de elementos */
+    .card,
+    .resource-box,
+    section {
+        page-break-inside: avoid;
+    }
+
+    /* Margenes de pagina */
+    @page {
+        margin: 2cm;
+    }
+
+    /* Mostrar URL del sitio en footer */
+    body::after {
+        content: "Recursos educativos de Prof. Sergio Seguel - profesergiojsw.rf.gd";
+        display: block;
+        text-align: center;
+        margin-top: 30px;
+        font-size: 10pt;
+        color: #666;
+    }
+}
+
+/* ============================================ */
+/* FOCUS VISIBLE (Accesibilidad)               */
+/* ============================================ */
+:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.btn:focus-visible {
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.3);
+}
+
+/* ============================================ */
+/* REDUCED MOTION                              */
+/* ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ============================================ */
+/* DARK MODE (opcional, respeta preferencia)   */
+/* ============================================ */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --gray-100: #1f2937;
+        --gray-200: #374151;
+        --gray-500: #9ca3af;
+        --gray-700: #e5e7eb;
+        --gray-900: #f9fafb;
+    }
+
+    body {
+        background: #111827;
+        color: #e5e7eb;
+    }
+
+    .bg-light {
+        background: #1f2937 !important;
+    }
+
+    .card,
+    .feature-box,
+    .resource-box {
+        background: #1f2937;
+        border-color: #374151;
+    }
+
+    .text-muted {
+        color: #9ca3af !important;
+    }
+
+    .hero-section {
+        background: linear-gradient(135deg, #1e3a5f 0%, #1e293b 100%);
+    }
+
+    .table {
+        color: #e5e7eb;
+    }
+
+    .table-bordered {
+        border-color: #374151;
+    }
+
+    .alert-info {
+        background: #1e3a5f;
+        border-color: #2563eb;
+        color: #93c5fd;
+    }
+
+    .dropdown-menu {
+        background: #1f2937;
+        border-color: #374151;
+    }
+
+    .dropdown-item {
+        color: #e5e7eb;
+    }
+
+    .dropdown-item:hover {
+        background: #374151;
+    }
+}
