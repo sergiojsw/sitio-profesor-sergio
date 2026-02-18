@@ -16,19 +16,23 @@
                 <p class="text-muted mb-0">Unidad 1 - Matemática 7° Básico</p>
             </div>
         </div>
-        <div class="alert alert-success"><i class="bi bi-files me-2"></i><strong>29 guías disponibles</strong></div>
+        <div class="alert alert-success"><i class="bi bi-files me-2"></i><strong>29 guías disponibles</strong> - Cada guía incluye su solucionario</div>
         <div class="row g-3" id="file-list"></div>
     </div>
     <script>
         const files = ["01_Descubriendo_numeros_enteros.pdf","02_Representacion_en_Z.pdf.pdf","03_Valor_absoluto.pdf.pdf","04_Comparación_numeros_enteros.pdf.pdf","05_Orden_numeros_enteros.pdf.pdf","06_AdicionZ_concreta.pdf","07_AdicionZ_Recta_numerica.pdf","08_AdicionZ_Algoritmo.pdf.pdf","09_SustraccionZ_Trabajo_grupal.pdf","10_SustraccionZ_Varias_Estrategias.pdf.pdf","11_SustraccionZ_Juego.pdf","12_Problemas_en_Z.pdf.pdf","13_Ejercicios_combinados_Z.pdf.pdf","14_Decimal_por_natural.pdf.pdf","15_Multiplicacion_entre_decimales.pdf.pdf","16_Division_entre_decimales.pdf.pdf","17_Multiplicacion_fracciones_grafica.pdf","18_Multiplicacion_fracciones.pdf","19_Division_fracciones_grafica.pdf.pdf","20_Division_fracciones_algoritmo.pdf.pdf","21_Decimal_a_fraccion.pdf.pdf","22_Fraccion_a_decimal.pdf.pdf","23_Operaciones_combinadas.pdf.pdf","24_Representacion_de_porcentajes.pdf.pdf","25_Porcentaje_de_numero.pdf.pdf","26_Tanto_por_ciento.pdf.pdf","27_Calculo_del_100.pdf.pdf","28_Resolucion_de_problemas.pdf.pdf","29_PPOO.pdf"];
         const container = document.getElementById('file-list');
         files.forEach((file, i) => {
-            const name = file.replace('.pdf','').replace(/_/g,' ');
-            container.innerHTML += `<div class="col-md-6 col-lg-4">
+            const name = file.replace(/\.pdf$/i,'').replace(/\.pdf$/i,'').replace(/_/g,' ');
+            const solFile = file.replace(/\.pdf$/i,'').replace(/\.pdf$/i,'') + '_SOL.pdf';
+            container.innerHTML += `<div class="col-md-6">
                 <div class="card h-100">
-                    <div class="card-body d-flex justify-content-between align-items-center">
-                        <h6 class="mb-0 small">${name}</h6>
-                        <a href="${file}" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                    <div class="card-body">
+                        <h6 class="mb-3"><i class="bi bi-file-text text-success me-2"></i>${name}</h6>
+                        <div class="btn-group w-100">
+                            <a href="${file}" class="btn btn-success btn-sm" download><i class="bi bi-file-earmark-pdf me-1"></i>Guía</a>
+                            <a href="../solucionario/${solFile}" class="btn btn-outline-success btn-sm" download><i class="bi bi-check2-circle me-1"></i>Solución</a>
+                        </div>
                     </div>
                 </div>
             </div>`;
