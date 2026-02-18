@@ -1,0 +1,8 @@
+.DS_Store
+*.log
+.env
+node_modules/
+
+# Archivos grandes (ya en servidor FTP)
+recursos/textos/*.pdf
+recursos/*/unidad*/videos/*.mp4

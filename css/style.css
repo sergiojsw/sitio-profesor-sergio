@@ -1,0 +1,351 @@
+/**
+ * Sitio Web Profesor Sergio Seguel
+ * Estilos personalizados
+ */
+
+/* ============================================ */
+/* VARIABLES Y BASE                            */
+/* ============================================ */
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --success: #059669;
+    --warning: #d97706;
+    --danger: #dc2626;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-500: #6b7280;
+    --gray-700: #374151;
+    --gray-900: #111827;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--gray-700);
+    background: #fafafa;
+}
+
+/* ============================================ */
+/* NAVBAR                                      */
+/* ============================================ */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-size: 1.1rem;
+}
+
+/* ============================================ */
+/* HERO SECTION                                */
+/* ============================================ */
+.hero-section {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    padding: 60px 0;
+}
+
+.min-vh-75 {
+    min-height: 65vh;
+}
+
+.hero-image {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: white;
+    box-shadow: 0 20px 60px rgba(37, 99, 235, 0.3);
+}
+
+.hero-image i {
+    font-size: 8rem;
+}
+
+/* ============================================ */
+/* PAGE HEADER                                 */
+/* ============================================ */
+.page-header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+}
+
+.page-header.bg-danger {
+    background: linear-gradient(135deg, #dc2626, #b91c1c) !important;
+}
+
+.breadcrumb-light {
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb-light .breadcrumb-item a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+}
+
+.breadcrumb-light .breadcrumb-item a:hover {
+    color: white;
+}
+
+.breadcrumb-light .breadcrumb-item.active {
+    color: rgba(255,255,255,0.9);
+}
+
+.breadcrumb-light .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255,255,255,0.5);
+}
+
+/* ============================================ */
+/* COURSE CARDS                                */
+/* ============================================ */
+.course-card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+.course-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 2rem;
+    color: white;
+}
+
+/* ============================================ */
+/* FEATURE BOXES                               */
+/* ============================================ */
+.feature-box {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+/* ============================================ */
+/* UNIT CARDS                                  */
+/* ============================================ */
+.unit-card .card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.unit-card .card-header {
+    padding: 20px 25px;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.unit-card .card-header:hover {
+    opacity: 0.95;
+}
+
+.bg-gradient-1 {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.bg-gradient-2 {
+    background: linear-gradient(135deg, #059669, #047857);
+}
+
+.bg-gradient-3 {
+    background: linear-gradient(135deg, #d97706, #b45309);
+}
+
+.bg-gradient-4 {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+}
+
+/* ============================================ */
+/* RESOURCE BOXES                              */
+/* ============================================ */
+.resource-box {
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.resource-box:hover {
+    border-color: var(--primary);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.1);
+}
+
+.resource-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    font-size: 1.3rem;
+}
+
+.resource-box h6 {
+    margin-bottom: 12px;
+    color: var(--gray-700);
+}
+
+/* ============================================ */
+/* VIDEO CARDS                                 */
+/* ============================================ */
+.video-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.video-thumbnail {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    background: var(--gray-100);
+}
+
+.video-thumbnail iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ============================================ */
+/* CONTACT PAGE                                */
+/* ============================================ */
+.avatar-large {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.contact-item {
+    transition: all 0.2s ease;
+}
+
+.contact-item:hover {
+    background: #e0f2fe !important;
+}
+
+/* ============================================ */
+/* BUTTONS                                     */
+/* ============================================ */
+.btn-primary {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-lg {
+    padding: 12px 28px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+/* ============================================ */
+/* RESPONSIVE                                  */
+/* ============================================ */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero-image i {
+        font-size: 5rem;
+    }
+
+    .display-4 {
+        font-size: 2rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .unit-card .card-header {
+        padding: 15px 20px;
+    }
+
+    .resource-box {
+        padding: 15px;
+    }
+
+    .btn-group {
+        flex-wrap: wrap;
+    }
+
+    .btn-group .btn {
+        margin-bottom: 5px;
+    }
+}
+
+/* ============================================ */
+/* UTILITIES                                   */
+/* ============================================ */
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08) !important;
+}

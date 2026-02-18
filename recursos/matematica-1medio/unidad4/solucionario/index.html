@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solucionario Unidad 4 - Matemática 1° Medio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .solution-card { transition: transform 0.2s; border-left: 4px solid #10b981; }
+        .solution-card:hover { transform: translateY(-3px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="d-flex align-items-center mb-4">
+            <a href="../../../../cursos/matematica-1medio.html" class="btn btn-outline-primary me-3"><i class="bi bi-arrow-left"></i></a>
+            <div>
+                <h2 class="mb-0">Solucionario Unidad 4</h2>
+                <p class="text-muted mb-0">Matemática 1° Medio</p>
+            </div>
+        </div>
+        <div class="alert alert-success"><i class="bi bi-check-circle me-2"></i><strong>32 solucionarios disponibles</strong></div>
+        <div class="row g-3" id="file-list"></div>
+    </div>
+    <script>
+        const pdfs = [];
+        for(let i=1; i<=32; i++) pdfs.push(String(i).padStart(2,'0'));
+        const container = document.getElementById('file-list');
+        pdfs.forEach((num,i) => {
+            const tipo = i < Math.floor(32*0.25) ? ['Refuerzo','success'] : 
+                        i < Math.floor(32*0.5) ? ['Ejercitación','primary'] : 
+                        i < Math.floor(32*0.75) ? ['Ampliación','warning'] : ['Profundización','info'];
+            const file = num + '_' + tipo[0].toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "") + '_sol.pdf';
+            container.innerHTML += '<div class="col-md-6 col-lg-4"><div class="card solution-card h-100"><div class="card-body d-flex justify-content-between align-items-center"><div><span class="badge bg-'+tipo[1]+' mb-1">'+tipo[0]+'</span><h6 class="mb-0">Solucionario '+(i+1)+'</h6></div><a href="'+file+'" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a></div></div></div>';
+        });
+    </script>
+</body>
+</html>

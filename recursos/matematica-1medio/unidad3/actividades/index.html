@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades Unidad 3 - Geometría | Prof. Sergio Seguel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../css/style.css">
+    <style>
+        .activity-card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .activity-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        .badge-refuerzo { background: #10b981; }
+        .badge-ejercitacion { background: #3b82f6; }
+        .badge-ampliacion { background: #f59e0b; }
+        .badge-profundizacion { background: #8b5cf6; }
+        .badge-interdisciplinariedad { background: #ec4899; }
+        .badge-sintesis { background: #6366f1; }
+        .badge-proyecto { background: #ef4444; }
+        .section-divider {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0 1.5rem;
+        }
+        .page-ref {
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+        .activity-description {
+            font-size: 0.9rem;
+            color: #4b5563;
+            line-height: 1.5;
+        }
+        .topic-alert {
+            border-left: 4px solid;
+            padding: 0.75rem 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+        .topic-homotecia { background: #fef3c7; border-color: #f59e0b; }
+        .topic-semejanza { background: #dbeafe; border-color: #3b82f6; }
+        .topic-euclides { background: #f3e8ff; border-color: #8b5cf6; }
+    </style>
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../../../../index.html">
+                <i class="bi bi-mortarboard-fill me-2"></i>Prof. Sergio Seguel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../../../index.html"><i class="bi bi-house me-1"></i>Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../../../../cursos/matematica-1medio.html"><i class="bi bi-calculator me-1"></i>Matemática 1°M</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="page-header bg-warning text-dark py-5">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-2">
+                    <li class="breadcrumb-item"><a href="../../../../index.html" class="text-dark">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="../../../../cursos/matematica-1medio.html" class="text-dark">Matemática 1°M</a></li>
+                    <li class="breadcrumb-item"><a href="../index.html" class="text-dark">Unidad 3</a></li>
+                    <li class="breadcrumb-item active text-dark">Actividades</li>
+                </ol>
+            </nav>
+            <h1 class="display-5 fw-bold mb-2">
+                <i class="bi bi-journal-text me-3"></i>Actividades Unidad 3
+            </h1>
+            <p class="lead mb-0">Geometría: Homotecia, Semejanza y Teorema de Euclides</p>
+            <span class="badge bg-dark mt-3">33 actividades disponibles</span>
+        </div>
+    </section>
+
+    <!-- Contenido -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Leyenda de tipos -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h6 class="mb-3"><i class="bi bi-info-circle me-2"></i>Tipos de actividades:</h6>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge badge-refuerzo">Refuerzo</span>
+                        <span class="badge badge-ejercitacion">Ejercitación</span>
+                        <span class="badge badge-ampliacion">Ampliación</span>
+                        <span class="badge badge-profundizacion">Profundización</span>
+                        <span class="badge badge-interdisciplinariedad">Interdisciplinariedad</span>
+                        <span class="badge badge-sintesis">Síntesis</span>
+                        <span class="badge badge-proyecto">Proyecto</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 1: RAZONES (1-4) -->
+            <div class="section-divider">
+                <h4 class="mb-0"><i class="bi bi-percent me-2"></i>Razones y Proporciones (Actividades 1-4)</h4>
+            </div>
+
+            <div class="row g-4 mb-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 1</h5>
+                                <span class="badge badge-refuerzo">Refuerzo</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 93</p>
+                            <p class="activity-description">Introducción a razones con ejercicios de aplicación práctica. Comprensión de la relación entre dos magnitudes.</p>
+                            <a href="U3_ACT_1.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 2</h5>
+                                <span class="badge badge-refuerzo">Refuerzo</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 93</p>
+                            <p class="activity-description">Ejercicios guiados sobre razones. Relación entre cantidades y simplificación de razones.</p>
+                            <a href="U3_ACT_2.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 3</h5>
+                                <span class="badge badge-ejercitacion">Ejercitación</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 93</p>
+                            <p class="activity-description">Práctica de cálculo de razones en diferentes contextos. Problemas de aplicación con razones.</p>
+                            <a href="U3_ACT_3.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 4</h5>
+                                <span class="badge badge-ampliacion">Ampliación</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 93</p>
+                            <p class="activity-description">Problemas desafiantes con razones. Aplicación de razones en contextos reales y situaciones complejas.</p>
+                            <a href="U3_ACT_4.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 2: HOMOTECIA (5-17) -->
+            <div class="section-divider">
+                <h4 class="mb-0"><i class="bi bi-arrows-fullscreen me-2"></i>Homotecia (Actividades 5-17)</h4>
+            </div>
+
+            <div class="topic-alert topic-homotecia">
+                <strong><i class="bi bi-lightbulb me-2"></i>Conceptos clave:</strong> Centro de homotecia, razón de homotecia (positiva y negativa), propiedades de la homotecia, homotecia vectorial.
+            </div>
+
+            <div class="row g-4 mb-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 5</h5>
+                                <span class="badge badge-refuerzo">Refuerzo</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 95</p>
+                            <p class="activity-description">Introducción a la homotecia. Identificación de centro y razón de homotecia en figuras geométricas.</p>
+                            <a href="U3_ACT_5.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 6</h5>
+                                <span class="badge badge-refuerzo">Refuerzo</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 97</p>
+                            <p class="activity-description">Homotecia con razón positiva. Construcción de figuras homotéticas con ampliación.</p>
+                            <a href="U3_ACT_6.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 7</h5>
+                                <span class="badge badge-ejercitacion">Ejercitación</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 97</p>
+                            <p class="activity-description">Práctica de homotecia. Cálculo de razones y construcción de imágenes homotéticas.</p>
+                            <a href="U3_ACT_7.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 8</h5>
+                                <span class="badge badge-ampliacion">Ampliación</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 97</p>
+                            <p class="activity-description">Problemas avanzados de homotecia. Determinación de centros y razones en situaciones complejas.</p>
+                            <a href="U3_ACT_8.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 9</h5>
+                                <span class="badge badge-profundizacion">Profundización</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 97</p>
+                            <p class="activity-description">Análisis profundo de propiedades de la homotecia. Relación entre figura original e imagen.</p>
+                            <a href="U3_ACT_9.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 10</h5>
+                                <span class="badge badge-refuerzo">Refuerzo</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 99</p>
+                            <p class="activity-description">Propiedades de la homotecia. Conservación de ángulos y proporcionalidad de lados.</p>
+                            <a href="U3_ACT_10.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 11</h5>
+                                <span class="badge badge-ejercitacion">Ejercitación</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 99</p>
+                            <p class="activity-description">Práctica de propiedades de homotecia. Aplicación de propiedades en ejercicios variados.</p>
+                            <a href="U3_ACT_11.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 12</h5>
+                                <span class="badge badge-ampliacion">Ampliación</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 99</p>
+                            <p class="activity-description">Aplicaciones de propiedades de homotecia en problemas geométricos complejos.</p>
+                            <a href="U3_ACT_12.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 13</h5>
+                                <span class="badge badge-refuerzo">Refuerzo</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 103</p>
+                            <p class="activity-description">Homotecia vectorial. Representación de homotecias usando vectores y coordenadas.</p>
+                            <a href="U3_ACT_13.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 14</h5>
+                                <span class="badge badge-refuerzo">Refuerzo</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 105</p>
+                            <p class="activity-description">Práctica de homotecia vectorial. Cálculo de coordenadas de imágenes homotéticas.</p>
+                            <a href="U3_ACT_14.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 15</h5>
+                                <span class="badge badge-ejercitacion">Ejercitación</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 107</p>
+                            <p class="activity-description">Ejercicios de homotecia vectorial con GeoGebra. Uso de herramientas digitales para visualizar homotecias.</p>
+                            <a href="U3_ACT_15.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 16</h5>
+                                <span class="badge badge-ampliacion">Ampliación</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 107</p>
+                            <p class="activity-description">Problemas avanzados de homotecia vectorial. Aplicación en plano cartesiano.</p>
+                            <a href="U3_ACT_16.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 17</h5>
+                                <span class="badge badge-profundizacion">Profundización</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 107</p>
+                            <p class="activity-description">Análisis profundo de homotecia vectorial. Demostración de propiedades usando vectores.</p>
+                            <a href="U3_ACT_17.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 3: SEMEJANZA DE FIGURAS (18-25) -->
+            <div class="section-divider">
+                <h4 class="mb-0"><i class="bi bi-triangle me-2"></i>Semejanza de Figuras y Triángulos (Actividades 18-25)</h4>
+            </div>
+
+            <div class="topic-alert topic-semejanza">
+                <strong><i class="bi bi-lightbulb me-2"></i>Criterios de semejanza:</strong> AA (Ángulo-Ángulo), LLL (Lado-Lado-Lado), LAL (Lado-Ángulo-Lado).
+            </div>
+
+            <div class="row g-4 mb-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 18</h5>
+                                <span class="badge badge-interdisciplinariedad">Interdisciplinariedad</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Educación Ambiental</p>
+                            <p class="activity-description">Semejanza de figuras y escalas en mapas ecológicos. Conciencia ambiental aplicando geometría a problemas del cambio climático.</p>
+                            <a href="U3_ACT_18.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 19</h5>
+                                <span class="badge badge-profundizacion">Profundización</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 111</p>
+                            <p class="activity-description">Semejanza de figuras en contextos reales. Cálculo de dimensiones usando proporciones y semejanza.</p>
+                            <a href="U3_ACT_19.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 20</h5>
+                                <span class="badge badge-refuerzo">Refuerzo</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 113</p>
+                            <p class="activity-description">Criterios de semejanza de triángulos. Introducción a los criterios AA, LLL y LAL con ejemplos guiados.</p>
+                            <a href="U3_ACT_20.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 21</h5>
+                                <span class="badge badge-refuerzo">Refuerzo</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 115</p>
+                            <p class="activity-description">Aplicación de criterios de semejanza. Medición de distancias inaccesibles usando triángulos semejantes.</p>
+                            <a href="U3_ACT_21.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 22</h5>
+                                <span class="badge badge-refuerzo">Refuerzo</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 117</p>
+                            <p class="activity-description">Recurso interactivo GeoGebra. Visualización y manipulación de triángulos para reforzar criterios LAL, LLL y AA.</p>
+                            <a href="U3_ACT_22.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 23</h5>
+                                <span class="badge badge-ejercitacion">Ejercitación</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 117</p>
+                            <p class="activity-description">Práctica de criterios de semejanza. Determinar qué criterio permite demostrar la semejanza entre pares de triángulos.</p>
+                            <a href="U3_ACT_23.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 24</h5>
+                                <span class="badge badge-ampliacion">Ampliación</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 117</p>
+                            <p class="activity-description">Problemas avanzados de criterios de semejanza. Justificación de semejanza entre triángulos complejos.</p>
+                            <a href="U3_ACT_24.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 25</h5>
+                                <span class="badge badge-profundizacion">Profundización</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 117</p>
+                            <p class="activity-description">Análisis colaborativo de problemas de semejanza. Cálculo de distancias usando triángulos semejantes en contextos reales.</p>
+                            <a href="U3_ACT_25.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 4: TEOREMA DE EUCLIDES (26-31) -->
+            <div class="section-divider">
+                <h4 class="mb-0"><i class="bi bi-rulers me-2"></i>Teorema de Euclides (Actividades 26-31)</h4>
+            </div>
+
+            <div class="topic-alert topic-euclides">
+                <strong><i class="bi bi-lightbulb me-2"></i>Teoremas:</strong> Teorema de la altura (h² = p·q), Teorema de los catetos (a² = c·p, b² = c·q).
+            </div>
+
+            <div class="row g-4 mb-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 26</h5>
+                                <span class="badge badge-refuerzo">Refuerzo</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 119</p>
+                            <p class="activity-description">Introducción al Teorema de Euclides. Completar igualdades usando el teorema de la altura y los catetos.</p>
+                            <a href="U3_ACT_26.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 27</h5>
+                                <span class="badge badge-refuerzo">Refuerzo</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 121</p>
+                            <p class="activity-description">Aplicación del teorema de la altura. Calcular altura de un poste y longitudes de cuerdas usando Euclides.</p>
+                            <a href="U3_ACT_27.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 28</h5>
+                                <span class="badge badge-refuerzo">Refuerzo</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 123</p>
+                            <p class="activity-description">Problema de construcción de techo. Aplicar Euclides para calcular altura en triángulo rectángulo isósceles.</p>
+                            <a href="U3_ACT_28.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 29</h5>
+                                <span class="badge badge-ejercitacion">Ejercitación</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 123</p>
+                            <p class="activity-description">Práctica del Teorema de Euclides. Calcular valores de catetos e hipotenusa dados los segmentos.</p>
+                            <a href="U3_ACT_29.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 30</h5>
+                                <span class="badge badge-ampliacion">Ampliación</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 123</p>
+                            <p class="activity-description">Completar fórmulas del teorema. Relacionar altura, catetos y proyecciones en el triángulo rectángulo.</p>
+                            <a href="U3_ACT_30.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card activity-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 31</h5>
+                                <span class="badge badge-profundizacion">Profundización</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 123</p>
+                            <p class="activity-description">Demostración del Teorema de Euclides. Probar relaciones geométricas en el triángulo rectángulo.</p>
+                            <a href="U3_ACT_31.pdf" class="btn btn-warning btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN 5: SÍNTESIS Y PROYECTO (32-33) -->
+            <div class="section-divider">
+                <h4 class="mb-0"><i class="bi bi-flag-fill me-2"></i>Síntesis y Proyecto (Actividades 32-33)</h4>
+            </div>
+
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <div class="card activity-card border-info">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 32</h5>
+                                <span class="badge badge-sintesis">Síntesis</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 125</p>
+                            <p class="activity-description">Síntesis de Unidad 3 - Geometría. Ejercicios integradores de homotecia, semejanza y Teorema de Euclides para consolidar aprendizajes.</p>
+                            <a href="U3_ACT_32.pdf" class="btn btn-info text-white btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card activity-card border-danger">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="card-title mb-0">Actividad 33</h5>
+                                <span class="badge badge-proyecto">Proyecto</span>
+                            </div>
+                            <p class="page-ref mb-2"><i class="bi bi-book me-1"></i>Página 125</p>
+                            <p class="activity-description"><strong>Proyecto Colaborativo:</strong> La magia de la homotecia en la visión. Exploración del ojo humano y cómo percibimos imágenes aplicando conceptos de homotecia. Conexión con Ciencias Naturales (OA 11).</p>
+                            <a href="U3_ACT_33.pdf" class="btn btn-danger btn-sm w-100" download>
+                                <i class="bi bi-download me-1"></i>Descargar PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navegación inferior -->
+            <div class="d-flex justify-content-between mt-5">
+                <a href="../index.html" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-left me-2"></i>Volver a Unidad 3
+                </a>
+                <a href="../../unidad4/actividades/index.html" class="btn btn-warning">
+                    Unidad 4<i class="bi bi-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">
+                        <i class="bi bi-mortarboard-fill me-2"></i>
+                        Prof. Sergio Seguel - Liceo Ríos de Chile
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <small class="text-muted">Año Escolar 2026</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

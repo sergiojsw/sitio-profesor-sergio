@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prof. Sergio Seguel - Recursos Educativos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-mortarboard-fill me-2"></i>Prof. Sergio Seguel
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html"><i class="bi bi-house me-1"></i>Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <i class="bi bi-calculator me-1"></i>Cursos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="cursos/matematica-7basico.html">Matematica 7 Basico</a></li>
+                            <li><a class="dropdown-item" href="cursos/matematica-1medio.html">Matematica 1 Medio</a></li>
+                            <li><a class="dropdown-item" href="cursos/matematica-2medio.html">Matematica 2 Medio</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="videos.html"><i class="bi bi-youtube me-1"></i>Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html"><i class="bi bi-envelope me-1"></i>Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-75">
+                <div class="col-lg-6">
+                    <span class="badge bg-success mb-3 px-3 py-2">Liceo Ríos de Chile</span>
+                    <h1 class="display-4 fw-bold mb-4">
+                        Bienvenidos a mi <span class="text-primary">Aula Virtual</span>
+                    </h1>
+                    <p class="lead text-muted mb-4">
+                        Recursos educativos de matematica para estudiantes de 7 Basico, 1 y 2 Medio.
+                        Actividades, guias, videos y material de apoyo para tu aprendizaje.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#cursos" class="btn btn-primary btn-lg px-4">
+                            <i class="bi bi-folder-fill me-2"></i>Ver Cursos
+                        </a>
+                        <a href="videos.html" class="btn btn-outline-primary btn-lg px-4">
+                            <i class="bi bi-play-circle me-2"></i>Videos
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                    <div class="hero-image">
+                        <i class="bi bi-person-workspace display-1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cursos Disponibles -->
+    <section class="py-5 bg-light" id="cursos">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Mis Cursos</h2>
+                <p class="text-muted">Selecciona tu curso para acceder al material</p>
+            </div>
+            <div class="row g-4">
+                <!-- 7 BASICO -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 course-card">
+                        <div class="card-body text-center p-4">
+                            <div class="course-icon bg-success mb-3">
+                                <i class="bi bi-calculator-fill"></i>
+                            </div>
+                            <h4 class="card-title">Matematica</h4>
+                            <p class="text-muted">7 Basico - 2026</p>
+                            <hr>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>4 Unidades completas</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>79 Guias de trabajo</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>10 Lecciones</li>
+                            </ul>
+                            <a href="cursos/matematica-7basico.html" class="btn btn-success w-100">
+                                <i class="bi bi-arrow-right me-2"></i>Acceder
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1 MEDIO -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 course-card">
+                        <div class="card-body text-center p-4">
+                            <div class="course-icon bg-primary mb-3">
+                                <i class="bi bi-calculator-fill"></i>
+                            </div>
+                            <h4 class="card-title">Matematica</h4>
+                            <p class="text-muted">1 Medio - 2026</p>
+                            <hr>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>4 Unidades completas</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>161 Actividades</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Solucionarios</li>
+                            </ul>
+                            <a href="cursos/matematica-1medio.html" class="btn btn-primary w-100">
+                                <i class="bi bi-arrow-right me-2"></i>Acceder
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 MEDIO -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 course-card">
+                        <div class="card-body text-center p-4">
+                            <div class="course-icon mb-3" style="background-color: #7c3aed;">
+                                <i class="bi bi-calculator-fill"></i>
+                            </div>
+                            <h4 class="card-title">Matematica</h4>
+                            <p class="text-muted">2 Medio - 2026</p>
+                            <hr>
+                            <ul class="list-unstyled text-start mb-4">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>4 Unidades completas</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>161 Actividades</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Material completo</li>
+                            </ul>
+                            <a href="cursos/matematica-2medio.html" class="btn w-100" style="background-color: #7c3aed; color: white;">
+                                <i class="bi bi-arrow-right me-2"></i>Acceder
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Características -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-box text-center p-4">
+                        <div class="feature-icon bg-primary-subtle text-primary mb-3">
+                            <i class="bi bi-file-earmark-pdf"></i>
+                        </div>
+                        <h5>Guías y Actividades</h5>
+                        <p class="text-muted mb-0">Material descargable en PDF para practicar en casa</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box text-center p-4">
+                        <div class="feature-icon bg-danger-subtle text-danger mb-3">
+                            <i class="bi bi-youtube"></i>
+                        </div>
+                        <h5>Videos Explicativos</h5>
+                        <p class="text-muted mb-0">Clases y tutoriales para reforzar lo aprendido</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box text-center p-4">
+                        <div class="feature-icon bg-success-subtle text-success mb-3">
+                            <i class="bi bi-check2-square"></i>
+                        </div>
+                        <h5>Solucionarios</h5>
+                        <p class="text-muted mb-0">Respuestas paso a paso para verificar tu trabajo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">
+                        <i class="bi bi-mortarboard-fill me-2"></i>
+                        Prof. Sergio Seguel - Liceo Ríos de Chile
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <small class="text-muted">Año Escolar 2026</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
