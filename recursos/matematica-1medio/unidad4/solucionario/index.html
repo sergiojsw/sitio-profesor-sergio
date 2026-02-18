@@ -6,33 +6,432 @@
     <title>Solucionario Unidad 4 - Matemática 1° Medio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .sol-card { transition: transform 0.2s, box-shadow 0.2s; border-left: 4px solid #dc3545; }
+        .sol-card:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .section-title { background: linear-gradient(135deg, #dc3545, #b02a37); color: white; padding: 0.75rem 1rem; border-radius: 8px; margin-bottom: 1rem; }
+    </style>
 </head>
 <body class="bg-light">
     <div class="container py-5">
         <div class="d-flex align-items-center mb-4">
-            <a href="../../../../cursos/matematica-1medio.html" class="btn btn-outline-primary me-3"><i class="bi bi-arrow-left"></i></a>
+            <a href="../../../../cursos/matematica-1medio.html" class="btn btn-outline-danger me-3"><i class="bi bi-arrow-left"></i></a>
             <div>
-                <h2 class="mb-0 text-primary"><i class="bi bi-check2-circle me-2"></i>Solucionario</h2>
-                <p class="text-muted mb-0">Unidad 4 - Matemática 1° Medio</p>
+                <h2 class="mb-0 text-danger"><i class="bi bi-check2-circle me-2"></i>Solucionario</h2>
+                <p class="text-muted mb-0">Unidad 4: Datos y Azar - Matemática 1° Medio</p>
             </div>
         </div>
-        <div class="alert alert-primary"><i class="bi bi-files me-2"></i><strong>32 soluciones disponibles</strong></div>
-        <div class="row g-3" id="file-list"></div>
-    </div>
-    <script>
-        const files = ["U4_ACT_1_SOL.pdf","U4_ACT_2_SOL.pdf","U4_ACT_3_SOL.pdf","U4_ACT_4_SOL.pdf","U4_ACT_5_SOL.pdf","U4_ACT_6_SOL.pdf","U4_ACT_7_SOL.pdf","U4_ACT_8_SOL.pdf","U4_ACT_9_SOL.pdf","U4_ACT_10_SOL.pdf","U4_ACT_11_SOL.pdf","U4_ACT_12_SOL.pdf","U4_ACT_13_SOL.pdf","U4_ACT_14_SOL.pdf","U4_ACT_15_SOL.pdf","U4_ACT_16_SOL.pdf","U4_ACT_17_SOL.pdf","U4_ACT_18_SOL.pdf","U4_ACT_19_SOL.pdf","U4_ACT_20_SOL.pdf","U4_ACT_21_SOL.pdf","U4_ACT_22_SOL.pdf","U4_ACT_23_SOL.pdf","U4_ACT_24_SOL.pdf","U4_ACT_25_SOL.pdf","U4_ACT_26_SOL.pdf","U4_ACT_27_SOL.pdf","U4_ACT_28_SOL.pdf","U4_ACT_29_SOL.pdf","U4_ACT_30_SOL.pdf","U4_ACT_31_SOL.pdf","U4_ACT_32_SOL.pdf"];
-        const container = document.getElementById('file-list');
-        files.forEach((file, i) => {
-            const name = file.replace('.pdf','').replace(/_/g,' ').replace('SOL','');
-            container.innerHTML += `<div class="col-md-6 col-lg-4">
-                <div class="card h-100 border-primary">
-                    <div class="card-body d-flex justify-content-between align-items-center">
-                        <div><h6 class="mb-0 small">${name}</h6></div>
-                        <a href="${file}" class="btn btn-sm btn-primary"><i class="bi bi-download"></i></a>
+
+        <div class="alert alert-danger bg-danger bg-opacity-10 border-danger">
+            <i class="bi bi-info-circle me-2 text-danger"></i>
+            <strong>32 soluciones disponibles</strong> - Respuestas detalladas para cada actividad de la unidad
+        </div>
+
+        <!-- Sección 1: Estadística Descriptiva -->
+        <div class="section-title"><i class="bi bi-1-circle me-2"></i>Sección 1: Estadística Descriptiva</div>
+        <div class="row g-3 mb-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-success">Solución 1</span>
+                            <a href="U4_ACT_1_SOL.pdf" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Conocimientos Previos</h6>
+                        <p class="card-text small text-muted">Repaso de tablas, gráficos y organización de datos.</p>
                     </div>
                 </div>
-            </div>`;
-        });
-    </script>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-success">Solución 2</span>
+                            <a href="U4_ACT_2_SOL.pdf" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Recolección de Datos</h6>
+                        <p class="card-text small text-muted">Métodos de recolección: encuestas, observación, experimentos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 3</span>
+                            <a href="U4_ACT_3_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Tablas de Frecuencia</h6>
+                        <p class="card-text small text-muted">Construcción de tablas con frecuencia absoluta y relativa.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 4</span>
+                            <a href="U4_ACT_4_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Gráficos Estadísticos</h6>
+                        <p class="card-text small text-muted">Barras, circulares, líneas e histogramas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 5</span>
+                            <a href="U4_ACT_5_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Interpretación de Gráficos</h6>
+                        <p class="card-text small text-muted">Leer e interpretar información de gráficos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-warning text-dark">Solución 6</span>
+                            <a href="U4_ACT_6_SOL.pdf" class="btn btn-sm btn-outline-warning"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Práctica Gráficos</h6>
+                        <p class="card-text small text-muted">Ejercicios de construcción e interpretación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 2: Medidas de Tendencia Central -->
+        <div class="section-title"><i class="bi bi-2-circle me-2"></i>Sección 2: Medidas de Tendencia Central</div>
+        <div class="row g-3 mb-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-success">Solución 7</span>
+                            <a href="U4_ACT_7_SOL.pdf" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Media Aritmética</h6>
+                        <p class="card-text small text-muted">Cálculo del promedio de un conjunto de datos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-success">Solución 8</span>
+                            <a href="U4_ACT_8_SOL.pdf" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Mediana</h6>
+                        <p class="card-text small text-muted">Valor central de datos ordenados.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 9</span>
+                            <a href="U4_ACT_9_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Moda</h6>
+                        <p class="card-text small text-muted">Valor más frecuente en los datos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 10</span>
+                            <a href="U4_ACT_10_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Comparación de Medidas</h6>
+                        <p class="card-text small text-muted">Cuándo usar media, mediana o moda.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 11</span>
+                            <a href="U4_ACT_11_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Datos Agrupados</h6>
+                        <p class="card-text small text-muted">Medidas de tendencia con intervalos de clase.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-warning text-dark">Solución 12</span>
+                            <a href="U4_ACT_12_SOL.pdf" class="btn btn-sm btn-outline-warning"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Práctica Medidas</h6>
+                        <p class="card-text small text-muted">Ejercicios de cálculo de media, mediana y moda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 3: Probabilidad -->
+        <div class="section-title"><i class="bi bi-3-circle me-2"></i>Sección 3: Probabilidad</div>
+        <div class="row g-3 mb-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-success">Solución 13</span>
+                            <a href="U4_ACT_13_SOL.pdf" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Experimentos Aleatorios</h6>
+                        <p class="card-text small text-muted">Diferencia entre determinístico y aleatorio.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-success">Solución 14</span>
+                            <a href="U4_ACT_14_SOL.pdf" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Espacio Muestral</h6>
+                        <p class="card-text small text-muted">Conjunto de todos los resultados posibles.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 15</span>
+                            <a href="U4_ACT_15_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Concepto de Probabilidad</h6>
+                        <p class="card-text small text-muted">P(A) = casos favorables / casos totales.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 16</span>
+                            <a href="U4_ACT_16_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Probabilidad con Dados</h6>
+                        <p class="card-text small text-muted">Experimentos con uno y dos dados.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 17</span>
+                            <a href="U4_ACT_17_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Probabilidad con Cartas</h6>
+                        <p class="card-text small text-muted">Experimentos con naipes y combinaciones.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-warning text-dark">Solución 18</span>
+                            <a href="U4_ACT_18_SOL.pdf" class="btn btn-sm btn-outline-warning"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Práctica Probabilidad</h6>
+                        <p class="card-text small text-muted">Ejercicios variados de probabilidad clásica.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 4: Ejercicios de Integración -->
+        <div class="section-title"><i class="bi bi-4-circle me-2"></i>Ejercicios de Integración y Práctica</div>
+        <div class="row g-3 mb-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-secondary">Solución 19</span>
+                            <a href="U4_ACT_19_SOL.pdf" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Ejercicio Integrado 1</h6>
+                        <p class="card-text small text-muted">Problemas combinados de estadística y probabilidad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-secondary">Solución 20</span>
+                            <a href="U4_ACT_20_SOL.pdf" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Ejercicio Integrado 2</h6>
+                        <p class="card-text small text-muted">Análisis de datos con gráficos y medidas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-secondary">Solución 21</span>
+                            <a href="U4_ACT_21_SOL.pdf" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Ejercicio Integrado 3</h6>
+                        <p class="card-text small text-muted">Resolución de problemas con datos reales.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-secondary">Solución 22</span>
+                            <a href="U4_ACT_22_SOL.pdf" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Ejercicio Integrado 4</h6>
+                        <p class="card-text small text-muted">Cálculo de probabilidades en contextos cotidianos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-secondary">Solución 23</span>
+                            <a href="U4_ACT_23_SOL.pdf" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Ejercicio Integrado 5</h6>
+                        <p class="card-text small text-muted">Interpretación de estudios estadísticos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-secondary">Solución 24</span>
+                            <a href="U4_ACT_24_SOL.pdf" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Ejercicio Integrado 6</h6>
+                        <p class="card-text small text-muted">Comparación de conjuntos de datos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-secondary">Solución 25</span>
+                            <a href="U4_ACT_25_SOL.pdf" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Ejercicio Integrado 7</h6>
+                        <p class="card-text small text-muted">Experimentos de probabilidad compuesta.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-secondary">Solución 26</span>
+                            <a href="U4_ACT_26_SOL.pdf" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Ejercicio Integrado 8</h6>
+                        <p class="card-text small text-muted">Análisis de encuestas y muestreo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-secondary">Solución 27</span>
+                            <a href="U4_ACT_27_SOL.pdf" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Ejercicio Integrado 9</h6>
+                        <p class="card-text small text-muted">Problemas de toma de decisiones con datos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-secondary">Solución 28</span>
+                            <a href="U4_ACT_28_SOL.pdf" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Ejercicio Integrado 10</h6>
+                        <p class="card-text small text-muted">Problemas de nivel avanzado.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-secondary">Solución 29</span>
+                            <a href="U4_ACT_29_SOL.pdf" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Ejercicio Integrado 11</h6>
+                        <p class="card-text small text-muted">Repaso general de la unidad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-info">Solución 30</span>
+                            <a href="U4_ACT_30_SOL.pdf" class="btn btn-sm btn-outline-info"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Evaluación Formativa</h6>
+                        <p class="card-text small text-muted">Evaluación de progreso de la unidad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-danger">Solución 31</span>
+                            <a href="U4_ACT_31_SOL.pdf" class="btn btn-sm btn-outline-danger"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Evaluación Sumativa</h6>
+                        <p class="card-text small text-muted">Evaluación final de la Unidad 4.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-dark">Solución 32</span>
+                            <a href="U4_ACT_32_SOL.pdf" class="btn btn-sm btn-outline-dark"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Proyecto de Unidad</h6>
+                        <p class="card-text small text-muted">Proyecto integrador de datos y azar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

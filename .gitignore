@@ -6,3 +6,16 @@ node_modules/
 # Archivos grandes (ya en servidor FTP)
 recursos/textos/*.pdf
 recursos/*/unidad*/videos/*.mp4
+
+# Backups de produccion (no subir a git)
+backups/
+
+# Reportes de deploy temporales
+scripts/deploy-report-*.txt
+scripts/deploy-history.log
+
+# Temporales
+/tmp/
+*.swp
+*.swo
+*~

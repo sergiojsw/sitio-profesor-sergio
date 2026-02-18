@@ -21,14 +21,54 @@
     </div>
     <script>
         const files = ["01_Descubriendo_numeros_enteros.pdf","02_Representacion_en_Z.pdf.pdf","03_Valor_absoluto.pdf.pdf","04_Comparación_numeros_enteros.pdf.pdf","05_Orden_numeros_enteros.pdf.pdf","06_AdicionZ_concreta.pdf","07_AdicionZ_Recta_numerica.pdf","08_AdicionZ_Algoritmo.pdf.pdf","09_SustraccionZ_Trabajo_grupal.pdf","10_SustraccionZ_Varias_Estrategias.pdf.pdf","11_SustraccionZ_Juego.pdf","12_Problemas_en_Z.pdf.pdf","13_Ejercicios_combinados_Z.pdf.pdf","14_Decimal_por_natural.pdf.pdf","15_Multiplicacion_entre_decimales.pdf.pdf","16_Division_entre_decimales.pdf.pdf","17_Multiplicacion_fracciones_grafica.pdf","18_Multiplicacion_fracciones.pdf","19_Division_fracciones_grafica.pdf.pdf","20_Division_fracciones_algoritmo.pdf.pdf","21_Decimal_a_fraccion.pdf.pdf","22_Fraccion_a_decimal.pdf.pdf","23_Operaciones_combinadas.pdf.pdf","24_Representacion_de_porcentajes.pdf.pdf","25_Porcentaje_de_numero.pdf.pdf","26_Tanto_por_ciento.pdf.pdf","27_Calculo_del_100.pdf.pdf","28_Resolucion_de_problemas.pdf.pdf","29_PPOO.pdf"];
+
+        // Recursos multimedia asociados a guías específicas
+        const recursos = {
+            "01_Descubriendo_numeros_enteros.pdf": {
+                audio: "../audios/01_Audio01.mp3",
+                audioLabel: "Audio introductorio"
+            },
+            "29_PPOO.pdf": {
+                videos: [
+                    { title: "Pueblos Originarios Norte", url: "https://youtu.be/o0KWFuxpMkc" },
+                    { title: "Pueblos Originarios Centro", url: "https://youtu.be/UrxJsitPzrQ" },
+                    { title: "Pueblos Originarios Sur", url: "https://youtu.be/NNTDNOmOHz0" }
+                ]
+            }
+        };
+
         const container = document.getElementById('file-list');
         files.forEach((file, i) => {
             const name = file.replace(/\.pdf$/i,'').replace(/\.pdf$/i,'').replace(/_/g,' ');
             const solFile = file.replace(/\.pdf$/i,'').replace(/\.pdf$/i,'') + '_SOL.pdf';
+            const recurso = recursos[file] || {};
+
+            let audioHtml = '';
+            let videoHtml = '';
+            if (recurso.audio) {
+                audioHtml = `<div class="bg-warning bg-opacity-10 rounded p-2 mb-2">
+                    <small class="text-warning fw-bold"><i class="bi bi-music-note-beamed me-1"></i>${recurso.audioLabel}:</small>
+                    <audio controls class="w-100 mt-1" style="height:35px">
+                        <source src="${recurso.audio}" type="audio/mpeg">
+                    </audio>
+                </div>`;
+            }
+            if (recurso.videos) {
+                const videoLinks = recurso.videos.map(v =>
+                    `<a href="${v.url}" target="_blank" class="btn btn-sm btn-outline-danger mb-1"><i class="bi bi-youtube me-1"></i>${v.title}</a>`
+                ).join(' ');
+                videoHtml = `<div class="bg-danger bg-opacity-10 rounded p-2 mb-2">
+                    <small class="text-danger fw-bold d-block mb-1"><i class="bi bi-play-circle me-1"></i>Videos de apoyo:</small>
+                    ${videoLinks}
+                </div>`;
+            }
+
             container.innerHTML += `<div class="col-md-6">
                 <div class="card h-100">
                     <div class="card-body">
                         <h6 class="mb-3"><i class="bi bi-file-text text-success me-2"></i>${name}</h6>
+                        ${audioHtml}
+                        ${videoHtml}
                         <div class="btn-group w-100">
                             <a href="${file}" class="btn btn-success btn-sm" download><i class="bi bi-file-earmark-pdf me-1"></i>Guía</a>
                             <a href="../solucionario/${solFile}" class="btn btn-outline-success btn-sm" download><i class="bi bi-check2-circle me-1"></i>Solución</a>

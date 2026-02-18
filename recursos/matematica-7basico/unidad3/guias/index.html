@@ -21,14 +21,45 @@
     </div>
     <script>
         const files = ["01_Plano_cartesiano.pdf","02_Vectores.pdf.pdf","03_Circunferencia_circulo_elementos.pdf","04_El_numero_pi.pdf","05_Perimetro_circunferencia.pdf.pdf","06_Descubriendo_area_circulo.pdf","07_Area_circulo.pdf.pdf","08_Rectas_paralelas_perpendiculares.pdf","09_Arte_paralelas_perpendiculares.pdf","10_Congruencia.pdf","11_Taller_Construyamos_triangulos.pdf","12_Triangulos_congruentes.pdf","13_Taller_Construyamos_cuadrilateros.pdf.pdf","14_Cuadrilateros_congruentes.pdf","15_Punto_medio_segmento.pdf","16_Simetral_o_mediatriz.pdf","17_Bisectriz.pdf","18_Bicetrices_en_Geogebra.pdf","19_Incentro_y_bisectrices.pdf","20_Construccion","21_Ortocentro_y_alturas.pdf","22_Construccion_de_transversales.pdf","23_Taller_equilibremos_triangulos.pdf","24_Baricentro_y_transversales.pdf","alturas.pdf","de"];
+
+        // Recursos multimedia asociados a guías específicas
+        const recursos = {
+            "01_Plano_cartesiano.pdf": {
+                videos: [{ title: "Cosmovisión Mapuche", url: "https://youtu.be/TuqIDIbDGv8" }]
+            },
+            "04_El_numero_pi.pdf": {
+                videos: [{ title: "El Número Pi", url: "https://youtu.be/XEf9CRX_cdc" }]
+            },
+            "06_Descubriendo_area_circulo.pdf": {
+                videos: [{ title: "Área del Círculo", url: "https://youtu.be/78tUrcBUtfY" }]
+            },
+            "07_Area_circulo.pdf.pdf": {
+                videos: [{ title: "Área del Círculo", url: "https://youtu.be/78tUrcBUtfY" }]
+            }
+        };
+
         const container = document.getElementById('file-list');
         files.forEach((file, i) => {
             const name = file.replace(/\.pdf$/i,'').replace(/\.pdf$/i,'').replace(/_/g,' ');
             const solFile = file.replace(/\.pdf$/i,'').replace(/\.pdf$/i,'') + '_SOL.pdf';
+            const recurso = recursos[file] || {};
+
+            let videoHtml = '';
+            if (recurso.videos) {
+                const videoLinks = recurso.videos.map(v =>
+                    `<a href="${v.url}" target="_blank" class="btn btn-sm btn-outline-danger mb-1"><i class="bi bi-youtube me-1"></i>${v.title}</a>`
+                ).join(' ');
+                videoHtml = `<div class="bg-danger bg-opacity-10 rounded p-2 mb-2">
+                    <small class="text-danger fw-bold d-block mb-1"><i class="bi bi-play-circle me-1"></i>Video de apoyo:</small>
+                    ${videoLinks}
+                </div>`;
+            }
+
             container.innerHTML += `<div class="col-md-6">
                 <div class="card h-100">
                     <div class="card-body">
                         <h6 class="mb-3"><i class="bi bi-file-text text-success me-2"></i>${name}</h6>
+                        ${videoHtml}
                         <div class="btn-group w-100">
                             <a href="${file}" class="btn btn-success btn-sm" download><i class="bi bi-file-earmark-pdf me-1"></i>Guía</a>
                             <a href="../solucionario/${solFile}" class="btn btn-outline-success btn-sm" download><i class="bi bi-check2-circle me-1"></i>Solución</a>

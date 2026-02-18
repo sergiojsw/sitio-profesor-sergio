@@ -6,6 +6,11 @@
     <title>Solucionario Unidad 3 - Matemática 7° Básico</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .sol-card { transition: transform 0.2s, box-shadow 0.2s; border-left: 4px solid #198754; }
+        .sol-card:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .section-title { background: linear-gradient(135deg, #198754, #157347); color: white; padding: 0.75rem 1rem; border-radius: 8px; margin-bottom: 1rem; }
+    </style>
 </head>
 <body class="bg-light">
     <div class="container py-5">
@@ -13,26 +18,425 @@
             <a href="../../../../cursos/matematica-7basico.html" class="btn btn-outline-success me-3"><i class="bi bi-arrow-left"></i></a>
             <div>
                 <h2 class="mb-0 text-success"><i class="bi bi-check2-circle me-2"></i>Solucionario</h2>
-                <p class="text-muted mb-0">Unidad 3 - Matemática 7° Básico</p>
+                <p class="text-muted mb-0">Unidad 3: Geometría - Matemática 7° Básico</p>
             </div>
         </div>
-        <div class="alert alert-success"><i class="bi bi-files me-2"></i><strong>32 soluciones disponibles</strong></div>
-        <div class="row g-3" id="file-list"></div>
-    </div>
-    <script>
-        const files = ["01_Evaluacion_diagnostica_U3_SOL.pdf","01_Plano_cartesiano_SOL.pdf","01_Proyecto_interdisciplinar_U3_SOL.pdf","02_Evaluacion_formativa_L6_SOL.pdf","02_Proyecto_matematico_U3_SOL.pdf","02_Vectores_SOL.pdf","03_Circunferencia_circulo_elementos_SOL.pdf","03_Evaluacion_formativa_L7_SOL.pdf","03_Matematica_medioambiente_U3_SOL.pdf","04_El_numero_pi_SOL.pdf","04_Evaluacion_formativa_L8_SOL.pdf","05_Evaluacion_sumativa_U3_SOL.pdf","05_Perimetro_circunferencia_SOL.pdf","06_Descubriendo_area_circulo_SOL.pdf","07_Area_circulo_SOL.pdf","08_Rectas_paralelas_perpendiculares_SOL.pdf","09_Arte_paralelas_perpendiculares_SOL.pdf","10_Congruencia_SOL.pdf","11_Taller_Construyamos_triangulos_SOL.pdf","12_Triangulos_congruentes_SOL.pdf","13_Taller_Construyamos_cuadrilateros_SOL.pdf","14_Cuadrilateros_congruentes_SOL.pdf","15_Punto_medio_segmento_SOL.pdf","16_Simetral_o_mediatriz_SOL.pdf","17_Bisectriz_SOL.pdf","18_Bicetrices_en_Geogebra_SOL.pdf","19_Incentro_y_bisectrices_SOL.pdf","20_Construccion de alturas_SOL.pdf","21_Ortocentro_y_alturas_SOL.pdf","22_Construccion_de_transversales_SOL.pdf","23_Taller_equilibremos_triangulos_SOL.pdf","24_Baricentro_y_transversales_SOL.pdf"];
-        const container = document.getElementById('file-list');
-        files.forEach((file, i) => {
-            const name = file.replace('.pdf','').replace(/_/g,' ').replace('SOL','');
-            container.innerHTML += `<div class="col-md-6 col-lg-4">
-                <div class="card h-100 border-success">
-                    <div class="card-body d-flex justify-content-between align-items-center">
-                        <div><h6 class="mb-0 small">${name}</h6></div>
-                        <a href="${file}" class="btn btn-sm btn-success"><i class="bi bi-download"></i></a>
+
+        <div class="alert alert-success bg-success bg-opacity-10 border-success">
+            <i class="bi bi-info-circle me-2 text-success"></i>
+            <strong>32 soluciones disponibles</strong> - Respuestas detalladas organizadas por tema
+        </div>
+
+        <!-- Sección 1: Plano Cartesiano -->
+        <div class="section-title"><i class="bi bi-1-circle me-2"></i>Plano Cartesiano y Vectores</div>
+        <div class="row g-3 mb-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-info">Diagnóstico</span>
+                            <a href="01_Evaluacion_diagnostica_U3_SOL.pdf" class="btn btn-sm btn-outline-info"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Evaluación Diagnóstica</h6>
+                        <p class="card-text small text-muted">Conocimientos previos de geometría.</p>
                     </div>
                 </div>
-            </div>`;
-        });
-    </script>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-success">Refuerzo</span>
+                            <a href="01_Plano_cartesiano_SOL.pdf" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Plano Cartesiano</h6>
+                        <p class="card-text small text-muted">Ejes coordenados, cuadrantes y ubicación de puntos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Ejercitación</span>
+                            <a href="02_Vectores_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Vectores</h6>
+                        <p class="card-text small text-muted">Representación y operaciones con vectores.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 2: Circunferencia y Círculo -->
+        <div class="section-title"><i class="bi bi-2-circle me-2"></i>Circunferencia y Círculo</div>
+        <div class="row g-3 mb-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-success">Refuerzo</span>
+                            <a href="03_Circunferencia_circulo_elementos_SOL.pdf" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Elementos</h6>
+                        <p class="card-text small text-muted">Radio, diámetro, cuerda, arco, sector y segmento.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Ejercitación</span>
+                            <a href="04_El_numero_pi_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">El Número π</h6>
+                        <p class="card-text small text-muted">Historia y significado de π ≈ 3.14159...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Ejercitación</span>
+                            <a href="05_Perimetro_circunferencia_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Perímetro</h6>
+                        <p class="card-text small text-muted">Cálculo del perímetro: P = 2πr.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-success">Refuerzo</span>
+                            <a href="06_Descubriendo_area_circulo_SOL.pdf" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Descubriendo el Área</h6>
+                        <p class="card-text small text-muted">Deducción de la fórmula del área del círculo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Ejercitación</span>
+                            <a href="07_Area_circulo_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Área del Círculo</h6>
+                        <p class="card-text small text-muted">Cálculo del área: A = πr².</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 3: Rectas y Congruencia -->
+        <div class="section-title"><i class="bi bi-3-circle me-2"></i>Rectas y Congruencia</div>
+        <div class="row g-3 mb-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-success">Refuerzo</span>
+                            <a href="08_Rectas_paralelas_perpendiculares_SOL.pdf" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Paralelas y Perpendiculares</h6>
+                        <p class="card-text small text-muted">Identificación y construcción de rectas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-secondary">Arte</span>
+                            <a href="09_Arte_paralelas_perpendiculares_SOL.pdf" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Arte con Rectas</h6>
+                        <p class="card-text small text-muted">Creaciones artísticas usando paralelas y perpendiculares.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Ejercitación</span>
+                            <a href="10_Congruencia_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Congruencia</h6>
+                        <p class="card-text small text-muted">Figuras congruentes tienen igual forma y tamaño.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-warning text-dark">Taller</span>
+                            <a href="11_Taller_Construyamos_triangulos_SOL.pdf" class="btn btn-sm btn-outline-warning"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Taller Triángulos</h6>
+                        <p class="card-text small text-muted">Construcción de triángulos con regla y compás.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Ejercitación</span>
+                            <a href="12_Triangulos_congruentes_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Triángulos Congruentes</h6>
+                        <p class="card-text small text-muted">Criterios de congruencia de triángulos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-warning text-dark">Taller</span>
+                            <a href="13_Taller_Construyamos_cuadrilateros_SOL.pdf" class="btn btn-sm btn-outline-warning"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Taller Cuadriláteros</h6>
+                        <p class="card-text small text-muted">Construcción de cuadriláteros.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Ejercitación</span>
+                            <a href="14_Cuadrilateros_congruentes_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Cuadriláteros Congruentes</h6>
+                        <p class="card-text small text-muted">Congruencia de cuadriláteros.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 4: Puntos y Líneas Notables -->
+        <div class="section-title"><i class="bi bi-4-circle me-2"></i>Puntos y Líneas Notables en Triángulos</div>
+        <div class="row g-3 mb-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-success">Refuerzo</span>
+                            <a href="15_Punto_medio_segmento_SOL.pdf" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Punto Medio</h6>
+                        <p class="card-text small text-muted">Construcción del punto medio de un segmento.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Ejercitación</span>
+                            <a href="16_Simetral_o_mediatriz_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Simetral/Mediatriz</h6>
+                        <p class="card-text small text-muted">Perpendicular al punto medio de un lado.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Ejercitación</span>
+                            <a href="17_Bisectriz_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Bisectriz</h6>
+                        <p class="card-text small text-muted">Semirrecta que divide un ángulo en dos partes iguales.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-secondary">GeoGebra</span>
+                            <a href="18_Bicetrices_en_Geogebra_SOL.pdf" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Bisectrices en GeoGebra</h6>
+                        <p class="card-text small text-muted">Construcción digital de bisectrices.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Ejercitación</span>
+                            <a href="19_Incentro_y_bisectrices_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Incentro</h6>
+                        <p class="card-text small text-muted">Punto de intersección de las bisectrices.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Ejercitación</span>
+                            <a href="20_Construccion de alturas_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Alturas</h6>
+                        <p class="card-text small text-muted">Construcción de alturas de un triángulo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Ejercitación</span>
+                            <a href="21_Ortocentro_y_alturas_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Ortocentro</h6>
+                        <p class="card-text small text-muted">Punto de intersección de las alturas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Ejercitación</span>
+                            <a href="22_Construccion_de_transversales_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Transversales</h6>
+                        <p class="card-text small text-muted">Medianas del triángulo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-warning text-dark">Taller</span>
+                            <a href="23_Taller_equilibremos_triangulos_SOL.pdf" class="btn btn-sm btn-outline-warning"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Taller Equilibrio</h6>
+                        <p class="card-text small text-muted">Encontrar el centro de gravedad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Ejercitación</span>
+                            <a href="24_Baricentro_y_transversales_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Baricentro</h6>
+                        <p class="card-text small text-muted">Punto de intersección de las medianas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 5: Evaluaciones y Proyectos -->
+        <div class="section-title"><i class="bi bi-star me-2"></i>Evaluaciones y Proyectos</div>
+        <div class="row g-3 mb-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-info">Formativa L6</span>
+                            <a href="02_Evaluacion_formativa_L6_SOL.pdf" class="btn btn-sm btn-outline-info"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Evaluación Formativa L6</h6>
+                        <p class="card-text small text-muted">Evaluación de la Lección 6.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-info">Formativa L7</span>
+                            <a href="03_Evaluacion_formativa_L7_SOL.pdf" class="btn btn-sm btn-outline-info"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Evaluación Formativa L7</h6>
+                        <p class="card-text small text-muted">Evaluación de la Lección 7.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-info">Formativa L8</span>
+                            <a href="04_Evaluacion_formativa_L8_SOL.pdf" class="btn btn-sm btn-outline-info"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Evaluación Formativa L8</h6>
+                        <p class="card-text small text-muted">Evaluación de la Lección 8.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-danger">Sumativa</span>
+                            <a href="05_Evaluacion_sumativa_U3_SOL.pdf" class="btn btn-sm btn-outline-danger"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Evaluación Sumativa U3</h6>
+                        <p class="card-text small text-muted">Evaluación final de la Unidad 3.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-secondary">Proyecto</span>
+                            <a href="01_Proyecto_interdisciplinar_U3_SOL.pdf" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Proyecto Interdisciplinario</h6>
+                        <p class="card-text small text-muted">Proyecto que integra geometría con otras áreas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-secondary">Proyecto</span>
+                            <a href="02_Proyecto_matematico_U3_SOL.pdf" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Proyecto Matemático</h6>
+                        <p class="card-text small text-muted">Proyecto de aplicación geométrica.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-success">Medioambiente</span>
+                            <a href="03_Matematica_medioambiente_U3_SOL.pdf" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Matemática y Medioambiente</h6>
+                        <p class="card-text small text-muted">Geometría en contextos ambientales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

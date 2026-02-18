@@ -21,14 +21,39 @@
     </div>
     <script>
         const files = ["01_Lenguaje_algebraico.pdf","02_Expresiones_algebraicas.pdf.pdf","03_Valorizacion_expresiones_algebraicas.pdf","04_Reduccion_expresiones_algebraicas.pdf.pdf","05_Razones.pdf","06_Proporciones.pdf","07_Variables_directamente_proporcionales.pdf","08_Variables_inversamente_proporcionales.pdf.pdf","09_Aplicaciones_de_proporcionalidad.pdf.pdf"];
+
+        // Recursos multimedia asociados a guías específicas
+        const recursos = {
+            "01_Lenguaje_algebraico.pdf": {
+                videos: [{ title: "Bosques", url: "https://youtu.be/tSec1ZS5noM" }]
+            },
+            "09_Aplicaciones_de_proporcionalidad.pdf.pdf": {
+                videos: [{ title: "Apollo", url: "https://youtu.be/3YMnJIIHaj0" }]
+            }
+        };
+
         const container = document.getElementById('file-list');
         files.forEach((file, i) => {
             const name = file.replace(/\.pdf$/i,'').replace(/\.pdf$/i,'').replace(/_/g,' ');
             const solFile = file.replace(/\.pdf$/i,'').replace(/\.pdf$/i,'') + '_SOL.pdf';
+            const recurso = recursos[file] || {};
+
+            let videoHtml = '';
+            if (recurso.videos) {
+                const videoLinks = recurso.videos.map(v =>
+                    `<a href="${v.url}" target="_blank" class="btn btn-sm btn-outline-danger mb-1"><i class="bi bi-youtube me-1"></i>${v.title}</a>`
+                ).join(' ');
+                videoHtml = `<div class="bg-danger bg-opacity-10 rounded p-2 mb-2">
+                    <small class="text-danger fw-bold d-block mb-1"><i class="bi bi-play-circle me-1"></i>Video de apoyo:</small>
+                    ${videoLinks}
+                </div>`;
+            }
+
             container.innerHTML += `<div class="col-md-6">
                 <div class="card h-100">
                     <div class="card-body">
                         <h6 class="mb-3"><i class="bi bi-file-text text-success me-2"></i>${name}</h6>
+                        ${videoHtml}
                         <div class="btn-group w-100">
                             <a href="${file}" class="btn btn-success btn-sm" download><i class="bi bi-file-earmark-pdf me-1"></i>Guía</a>
                             <a href="../solucionario/${solFile}" class="btn btn-outline-success btn-sm" download><i class="bi bi-check2-circle me-1"></i>Solución</a>

@@ -6,8 +6,8 @@
     <title>Prof. Sergio Seguel - Recursos Educativos de Matemática</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Recursos educativos de Matemática para 7° Básico, 1° y 2° Medio. Actividades, guías, solucionarios y videos. Prof. Sergio Seguel, Liceo Ríos de Chile, Frutillar.">
-    <meta name="keywords" content="matemática, educación, Chile, 7 básico, 1 medio, 2 medio, actividades, guías, solucionarios, videos educativos, Frutillar">
+    <meta name="description" content="Recursos educativos de Matemática para 7° Básico, 1° y 2° Medio. Actividades, guías, solucionarios y videos. Prof. Sergio Seguel, Liceo Ríos de Chile, Lirquén.">
+    <meta name="keywords" content="matemática, educación, Chile, 7 básico, 1 medio, 2 medio, actividades, guías, solucionarios, videos educativos, Lirquén">
     <meta name="author" content="Prof. Sergio Seguel">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://profesergiojsw.rf.gd/">
@@ -17,12 +17,10 @@
     <meta property="og:url" content="https://profesergiojsw.rf.gd/">
     <meta property="og:title" content="Prof. Sergio Seguel - Recursos Educativos de Matemática">
     <meta property="og:description" content="Recursos educativos de Matemática para 7° Básico, 1° y 2° Medio. Actividades, guías, solucionarios y videos.">
-    <meta property="og:image" content="https://profesergiojsw.rf.gd/img/og-image.png">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Prof. Sergio Seguel - Recursos Educativos">
-    <meta name="twitter:description" content="Recursos de Matemática para estudiantes de 7° Básico a 2° Medio">
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -32,45 +30,12 @@
         "name": "Prof. Sergio Seguel - Recursos Educativos",
         "description": "Recursos educativos de Matemática para 7° Básico, 1° y 2° Medio",
         "url": "https://profesergiojsw.rf.gd",
-        "sameAs": [],
+        "sameAs": ["https://www.youtube.com/@profesorsergiojsw"],
         "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Frutillar",
-            "addressRegion": "Los Lagos",
+            "addressLocality": "Lirquén",
+            "addressRegion": "Biobío",
             "addressCountry": "CL"
-        },
-        "member": {
-            "@type": "Person",
-            "name": "Sergio Seguel",
-            "jobTitle": "Profesor de Matemática",
-            "worksFor": {
-                "@type": "EducationalOrganization",
-                "name": "Liceo Ríos de Chile"
-            }
-        },
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Cursos de Matemática",
-            "itemListElement": [
-                {
-                    "@type": "Course",
-                    "name": "Matemática 7° Básico",
-                    "description": "79 guías de trabajo con solucionarios",
-                    "provider": {"@type": "Person", "name": "Prof. Sergio Seguel"}
-                },
-                {
-                    "@type": "Course",
-                    "name": "Matemática 1° Medio",
-                    "description": "161 actividades con solucionarios",
-                    "provider": {"@type": "Person", "name": "Prof. Sergio Seguel"}
-                },
-                {
-                    "@type": "Course",
-                    "name": "Matemática 2° Medio",
-                    "description": "161 actividades con solucionarios",
-                    "provider": {"@type": "Person", "name": "Prof. Sergio Seguel"}
-                }
-            ]
         }
     }
     </script>
@@ -81,12 +46,11 @@
 
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📐</text></svg>">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Prof. Sergio">
 
-    <!-- Preconnect para performance -->
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -94,16 +58,445 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --success: #10b981;
+            --danger: #ef4444;
+            --purple: #7c3aed;
+            --dark: #1e293b;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #334155;
+        }
+
+        /* Navbar */
+        .navbar {
+            backdrop-filter: blur(10px);
+            background: rgba(37, 99, 235, 0.95) !important;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title {
+            font-family: 'Fraunces', serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title span {
+            background: linear-gradient(90deg, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-hero-primary {
+            background: white;
+            color: var(--primary);
+            padding: 14px 28px;
+            font-weight: 600;
+            border-radius: 12px;
+            border: none;
+            transition: all 0.3s;
+        }
+
+        .btn-hero-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            background: white;
+            color: var(--primary-dark);
+        }
+
+        .btn-hero-secondary {
+            background: transparent;
+            color: white;
+            padding: 14px 28px;
+            font-weight: 600;
+            border-radius: 12px;
+            border: 2px solid rgba(255,255,255,0.5);
+            transition: all 0.3s;
+        }
+
+        .btn-hero-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: white;
+            color: white;
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 24px;
+            padding: 2rem;
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Fraunces', serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #fbbf24;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* YouTube Section */
+        .youtube-section {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .youtube-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+
+        .youtube-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .youtube-icon {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: #dc2626;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .btn-subscribe {
+            background: white;
+            color: #dc2626;
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            border: none;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-subscribe:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            color: #b91c1c;
+        }
+
+        .btn-channel {
+            background: transparent;
+            color: white;
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            border: 2px solid rgba(255,255,255,0.5);
+            transition: all 0.3s;
+        }
+
+        .btn-channel:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: white;
+            color: white;
+        }
+
+        /* Courses Section */
+        .courses-section {
+            padding: 5rem 0;
+            background: #f8fafc;
+        }
+
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            color: #64748b;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border: none;
+            height: 100%;
+        }
+
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .course-header {
+            padding: 2rem;
+            color: white;
+            position: relative;
+        }
+
+        .course-header.success { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+        .course-header.primary { background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); }
+        .course-header.purple { background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); }
+
+        .course-level {
+            font-size: 3rem;
+            font-weight: 800;
+            font-family: 'Fraunces', serif;
+        }
+
+        .course-body {
+            padding: 1.5rem 2rem 2rem;
+        }
+
+        .course-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .course-feature:last-child {
+            border-bottom: none;
+        }
+
+        .course-feature i {
+            width: 24px;
+            height: 24px;
+            background: #ecfdf5;
+            color: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+
+        .btn-course {
+            width: 100%;
+            padding: 14px;
+            font-weight: 600;
+            border-radius: 12px;
+            margin-top: 1rem;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            background: #f8fafc;
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .feature-icon.blue { background: #dbeafe; color: #2563eb; }
+        .feature-icon.red { background: #fee2e2; color: #dc2626; }
+        .feature-icon.green { background: #d1fae5; color: #059669; }
+        .feature-icon.purple { background: #ede9fe; color: #7c3aed; }
+
+        .feature-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .feature-text {
+            color: #64748b;
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-brand {
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            display: block;
+            padding: 6px 0;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-link {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .social-link.youtube { background: #dc2626; }
+        .social-link.whatsapp { background: #25d366; }
+        .social-link:hover { transform: translateY(-3px); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .hero-section { min-height: auto; padding: 4rem 0; }
+            .stat-number { font-size: 2rem; }
+            .section-title { font-size: 2rem; }
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
 </head>
 <body>
-    <!-- Skip Link para Accesibilidad -->
+    <!-- Skip Link -->
     <a href="#main-content" class="visually-hidden-focusable position-absolute top-0 start-0 p-3 bg-primary text-white">
         Saltar al contenido principal
     </a>
 
-    <!-- Navegación -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top" role="navigation" aria-label="Navegación principal">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
                 <i class="bi bi-mortarboard-fill me-2"></i>Prof. Sergio Seguel
@@ -118,334 +511,361 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                            <i class="bi bi-calculator me-1"></i>Cursos
+                            <i class="bi bi-book me-1"></i>Cursos
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="cursos/matematica-7basico.html">Matematica 7 Basico</a></li>
-                            <li><a class="dropdown-item" href="cursos/matematica-1medio.html">Matematica 1 Medio</a></li>
-                            <li><a class="dropdown-item" href="cursos/matematica-2medio.html">Matematica 2 Medio</a></li>
+                            <li><a class="dropdown-item" href="cursos/matematica-7basico.html"><i class="bi bi-mortarboard me-2 text-success"></i>7° Básico</a></li>
+                            <li><a class="dropdown-item" href="cursos/matematica-1medio.html"><i class="bi bi-mortarboard me-2 text-primary"></i>1° Medio</a></li>
+                            <li><a class="dropdown-item" href="cursos/matematica-2medio.html"><i class="bi bi-mortarboard me-2 text-purple"></i>2° Medio</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="videos.html"><i class="bi bi-youtube me-1"></i>Videos</a>
+                        <a class="nav-link" href="videos.html"><i class="bi bi-play-circle me-1"></i>Videos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.html"><i class="bi bi-envelope me-1" aria-hidden="true"></i>Contacto</a>
+                        <a class="nav-link" href="contacto.html"><i class="bi bi-envelope me-1"></i>Contacto</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-danger btn-sm px-3" href="https://www.youtube.com/@profesorsergiojsw?sub_confirmation=1" target="_blank" rel="noopener">
+                            <i class="bi bi-youtube me-1"></i>Suscribirse
+                        </a>
                     </li>
                 </ul>
-                <!-- Barra de búsqueda -->
-                <form class="d-none d-lg-flex ms-3" role="search" id="searchForm">
-                    <div class="input-group input-group-sm">
-                        <input type="search" class="form-control" placeholder="Buscar actividad..."
-                               aria-label="Buscar en el sitio" id="searchInput" style="width: 180px;">
-                        <button class="btn btn-light" type="submit" aria-label="Buscar">
-                            <i class="bi bi-search" aria-hidden="true"></i>
-                        </button>
-                    </div>
-                </form>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <main id="main-content">
-    <section class="hero-section">
-        <div class="container">
-            <div class="row align-items-center min-vh-75">
-                <div class="col-lg-6">
-                    <span class="badge bg-success mb-3 px-3 py-2">Liceo Ríos de Chile</span>
-                    <h1 class="display-4 fw-bold mb-4">
-                        Bienvenidos a mi <span class="text-primary">Aula Virtual</span>
-                    </h1>
-                    <p class="lead text-muted mb-4">
-                        Recursos educativos de matematica para estudiantes de 7 Basico, 1 y 2 Medio.
-                        Actividades, guias, videos y material de apoyo para tu aprendizaje.
-                    </p>
-                    <div class="d-flex gap-3 flex-wrap">
-                        <a href="#cursos" class="btn btn-primary btn-lg px-4">
-                            <i class="bi bi-folder-fill me-2"></i>Ver Cursos
-                        </a>
-                        <a href="videos.html" class="btn btn-outline-primary btn-lg px-4">
-                            <i class="bi bi-play-circle me-2"></i>Videos
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 text-center mt-5 mt-lg-0">
-                    <div class="hero-image">
-                        <i class="bi bi-person-workspace display-1"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cursos Disponibles -->
-    <section class="py-5 bg-light" id="cursos">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">Mis Cursos</h2>
-                <p class="text-muted">Selecciona tu curso para acceder al material</p>
-            </div>
-            <div class="row g-4">
-                <!-- 7 BASICO -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 course-card">
-                        <div class="card-body text-center p-4">
-                            <div class="course-icon bg-success mb-3">
-                                <i class="bi bi-calculator-fill"></i>
-                            </div>
-                            <h4 class="card-title">Matematica</h4>
-                            <p class="text-muted">7 Basico - 2026</p>
-                            <hr>
-                            <ul class="list-unstyled text-start mb-4">
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>4 Unidades completas</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>79 Guias de trabajo</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>10 Lecciones</li>
-                            </ul>
-                            <a href="cursos/matematica-7basico.html" class="btn btn-success w-100">
-                                <i class="bi bi-arrow-right me-2"></i>Acceder
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 hero-content">
+                        <div class="hero-badge">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Liceo Ríos de Chile, Lirquén
+                        </div>
+                        <h1 class="hero-title">
+                            Aprende <span>Matemática</span> de forma fácil
+                        </h1>
+                        <p class="hero-text">
+                            Recursos educativos completos para estudiantes de 7° Básico, 1° y 2° Medio.
+                            Guías, actividades, videos y solucionarios para tu aprendizaje.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#cursos" class="btn btn-hero-primary">
+                                <i class="bi bi-rocket-takeoff me-2"></i>Ver Cursos
+                            </a>
+                            <a href="https://www.youtube.com/@profesorsergiojsw?sub_confirmation=1" target="_blank" rel="noopener" class="btn btn-hero-secondary">
+                                <i class="bi bi-youtube me-2"></i>Suscribirse
                             </a>
                         </div>
                     </div>
-                </div>
-
-                <!-- 1 MEDIO -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 course-card">
-                        <div class="card-body text-center p-4">
-                            <div class="course-icon bg-primary mb-3">
-                                <i class="bi bi-calculator-fill"></i>
+                    <div class="col-lg-5 offset-lg-1 mt-5 mt-lg-0">
+                        <div class="hero-card float-animation">
+                            <h4 class="mb-4 text-center"><i class="bi bi-bar-chart-fill me-2"></i>Contenido Disponible</h4>
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <div class="stat-number">401+</div>
+                                    <div class="stat-label">Actividades</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">28</div>
+                                    <div class="stat-label">Videos</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">12</div>
+                                    <div class="stat-label">Unidades</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">3</div>
+                                    <div class="stat-label">Niveles</div>
+                                </div>
                             </div>
-                            <h4 class="card-title">Matematica</h4>
-                            <p class="text-muted">1 Medio - 2026</p>
-                            <hr>
-                            <ul class="list-unstyled text-start mb-4">
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>4 Unidades completas</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>161 Actividades</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Solucionarios</li>
-                            </ul>
-                            <a href="cursos/matematica-1medio.html" class="btn btn-primary w-100">
-                                <i class="bi bi-arrow-right me-2"></i>Acceder
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2 MEDIO -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 course-card">
-                        <div class="card-body text-center p-4">
-                            <div class="course-icon mb-3" style="background-color: #7c3aed;">
-                                <i class="bi bi-calculator-fill"></i>
-                            </div>
-                            <h4 class="card-title">Matematica</h4>
-                            <p class="text-muted">2 Medio - 2026</p>
-                            <hr>
-                            <ul class="list-unstyled text-start mb-4">
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>4 Unidades completas</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>161 Actividades</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Material completo</li>
-                            </ul>
-                            <a href="cursos/matematica-2medio.html" class="btn w-100" style="background-color: #7c3aed; color: white;">
-                                <i class="bi bi-arrow-right me-2"></i>Acceder
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Características -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="feature-box text-center p-4">
-                        <div class="feature-icon bg-primary-subtle text-primary mb-3">
-                            <i class="bi bi-file-earmark-pdf"></i>
-                        </div>
-                        <h5>Guías y Actividades</h5>
-                        <p class="text-muted mb-0">Material descargable en PDF para practicar en casa</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-box text-center p-4">
-                        <div class="feature-icon bg-danger-subtle text-danger mb-3">
+        <!-- YouTube Section -->
+        <section class="youtube-section">
+            <div class="container">
+                <div class="row align-items-center youtube-content">
+                    <div class="col-lg-7">
+                        <div class="youtube-icon">
                             <i class="bi bi-youtube"></i>
                         </div>
-                        <h5>Videos Explicativos</h5>
-                        <p class="text-muted mb-0">Clases y tutoriales para reforzar lo aprendido</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-box text-center p-4">
-                        <div class="feature-icon bg-success-subtle text-success mb-3">
-                            <i class="bi bi-check2-square"></i>
+                        <h2 class="text-white mb-3" style="font-family: 'Fraunces', serif; font-size: 2.2rem; font-weight: 700;">
+                            Suscríbete a mi canal de YouTube
+                        </h2>
+                        <p class="text-white opacity-90 mb-4" style="font-size: 1.1rem;">
+                            <strong>@profesorsergiojsw</strong> — Videos educativos de Matemática organizados por curso y unidad.
+                            ¡Activa la campana para no perderte ningún contenido!
+                        </p>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="https://www.youtube.com/@profesorsergiojsw?sub_confirmation=1" target="_blank" rel="noopener" class="btn btn-subscribe">
+                                <i class="bi bi-bell-fill"></i>Suscribirse Ahora
+                            </a>
+                            <a href="videos.html" class="btn btn-channel">
+                                <i class="bi bi-collection-play me-2"></i>Ver Videos
+                            </a>
                         </div>
-                        <h5>Solucionarios</h5>
-                        <p class="text-muted mb-0">Respuestas paso a paso para verificar tu trabajo</p>
+                    </div>
+                    <div class="col-lg-5 text-center mt-4 mt-lg-0">
+                        <div class="d-flex justify-content-center gap-4">
+                            <div class="text-white text-center">
+                                <div style="font-size: 3rem; font-weight: 800; font-family: 'Fraunces', serif;">28</div>
+                                <div style="opacity: 0.9;">Videos</div>
+                            </div>
+                            <div class="text-white text-center">
+                                <div style="font-size: 3rem; font-weight: 800; font-family: 'Fraunces', serif;">2</div>
+                                <div style="opacity: 0.9;">Playlists</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <!-- Courses Section -->
+        <section class="courses-section" id="cursos">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-title">Mis Cursos</h2>
+                    <p class="section-subtitle">Selecciona tu nivel para acceder al material completo</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- 7° Básico -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="course-card">
+                            <div class="course-header success">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <div class="opacity-75">Matemática</div>
+                                        <div class="course-level">7°B</div>
+                                    </div>
+                                    <i class="bi bi-calculator-fill" style="font-size: 3rem; opacity: 0.3;"></i>
+                                </div>
+                            </div>
+                            <div class="course-body">
+                                <div class="course-feature">
+                                    <i class="bi bi-check"></i>
+                                    <span>4 Unidades completas</span>
+                                </div>
+                                <div class="course-feature">
+                                    <i class="bi bi-check"></i>
+                                    <span>79 Guías de trabajo</span>
+                                </div>
+                                <div class="course-feature">
+                                    <i class="bi bi-check"></i>
+                                    <span>16 Videos educativos</span>
+                                </div>
+                                <div class="course-feature">
+                                    <i class="bi bi-check"></i>
+                                    <span>Apps interactivas</span>
+                                </div>
+                                <a href="cursos/matematica-7basico.html" class="btn btn-success btn-course">
+                                    Acceder al Curso <i class="bi bi-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 1° Medio -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="course-card">
+                            <div class="course-header primary">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <div class="opacity-75">Matemática</div>
+                                        <div class="course-level">1°M</div>
+                                    </div>
+                                    <i class="bi bi-graph-up-arrow" style="font-size: 3rem; opacity: 0.3;"></i>
+                                </div>
+                            </div>
+                            <div class="course-body">
+                                <div class="course-feature">
+                                    <i class="bi bi-check"></i>
+                                    <span>4 Unidades completas</span>
+                                </div>
+                                <div class="course-feature">
+                                    <i class="bi bi-check"></i>
+                                    <span>161 Actividades</span>
+                                </div>
+                                <div class="course-feature">
+                                    <i class="bi bi-check"></i>
+                                    <span>6 Videos educativos</span>
+                                </div>
+                                <div class="course-feature">
+                                    <i class="bi bi-check"></i>
+                                    <span>Solucionarios completos</span>
+                                </div>
+                                <a href="cursos/matematica-1medio.html" class="btn btn-primary btn-course">
+                                    Acceder al Curso <i class="bi bi-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2° Medio -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="course-card">
+                            <div class="course-header purple">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <div class="opacity-75">Matemática</div>
+                                        <div class="course-level">2°M</div>
+                                    </div>
+                                    <i class="bi bi-infinity" style="font-size: 3rem; opacity: 0.3;"></i>
+                                </div>
+                            </div>
+                            <div class="course-body">
+                                <div class="course-feature">
+                                    <i class="bi bi-check"></i>
+                                    <span>4 Unidades completas</span>
+                                </div>
+                                <div class="course-feature">
+                                    <i class="bi bi-check"></i>
+                                    <span>161 Actividades</span>
+                                </div>
+                                <div class="course-feature">
+                                    <i class="bi bi-check"></i>
+                                    <span>4 Videos educativos</span>
+                                </div>
+                                <div class="course-feature">
+                                    <i class="bi bi-check"></i>
+                                    <span>Material actualizado 2026</span>
+                                </div>
+                                <a href="cursos/matematica-2medio.html" class="btn btn-course" style="background: #7c3aed; color: white;">
+                                    Acceder al Curso <i class="bi bi-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Recursos Incluidos</h2>
+                    <p class="section-subtitle">Todo lo que necesitas para aprender matemática</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-6 col-lg-3">
+                        <div class="feature-card">
+                            <div class="feature-icon blue">
+                                <i class="bi bi-file-earmark-pdf"></i>
+                            </div>
+                            <h5 class="feature-title">Guías PDF</h5>
+                            <p class="feature-text">Material descargable para estudiar</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="feature-card">
+                            <div class="feature-icon red">
+                                <i class="bi bi-play-btn"></i>
+                            </div>
+                            <h5 class="feature-title">Videos</h5>
+                            <p class="feature-text">Clases explicativas en YouTube</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="feature-card">
+                            <div class="feature-icon green">
+                                <i class="bi bi-check2-all"></i>
+                            </div>
+                            <h5 class="feature-title">Solucionarios</h5>
+                            <p class="feature-text">Respuestas paso a paso</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <div class="feature-card">
+                            <div class="feature-icon purple">
+                                <i class="bi bi-phone"></i>
+                            </div>
+                            <h5 class="feature-title">Apps</h5>
+                            <p class="feature-text">Actividades interactivas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-5" role="contentinfo">
+    <footer>
         <div class="container">
             <div class="row g-4">
-                <div class="col-md-4">
-                    <h5 class="mb-3"><i class="bi bi-mortarboard-fill me-2" aria-hidden="true"></i>Prof. Sergio Seguel</h5>
-                    <p class="text-secondary mb-0">Docente de Matemática</p>
-                    <p class="text-secondary">Liceo Ríos de Chile, Frutillar</p>
-                </div>
-                <div class="col-md-4">
-                    <h6 class="mb-3">Cursos</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="cursos/matematica-7basico.html" class="text-secondary text-decoration-none">Matemática 7° Básico</a></li>
-                        <li class="mb-2"><a href="cursos/matematica-1medio.html" class="text-secondary text-decoration-none">Matemática 1° Medio</a></li>
-                        <li class="mb-2"><a href="cursos/matematica-2medio.html" class="text-secondary text-decoration-none">Matemática 2° Medio</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h6 class="mb-3">Compartir</h6>
-                    <div class="share-buttons">
-                        <a href="https://wa.me/?text=Recursos%20educativos%20de%20Matem%C3%A1tica%20-%20Prof.%20Sergio%20Seguel%20https://profesergiojsw.rf.gd"
-                           class="share-btn whatsapp" target="_blank" rel="noopener" aria-label="Compartir en WhatsApp">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <i class="bi bi-mortarboard-fill me-2"></i>Prof. Sergio Seguel
+                    </div>
+                    <p class="text-secondary mb-3">
+                        Docente de Matemática<br>
+                        Liceo Ríos de Chile, Lirquén
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/@profesorsergiojsw" target="_blank" rel="noopener" class="social-link youtube" aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                        <a href="https://wa.me/?text=Recursos%20de%20Matemática%20https://profesergiojsw.rf.gd" target="_blank" rel="noopener" class="social-link whatsapp" aria-label="WhatsApp">
                             <i class="bi bi-whatsapp"></i>
                         </a>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://profesergiojsw.rf.gd"
-                           class="share-btn facebook" target="_blank" rel="noopener" aria-label="Compartir en Facebook">
-                            <i class="bi bi-facebook"></i>
-                        </a>
-                        <a href="https://twitter.com/intent/tweet?text=Recursos%20educativos%20de%20Matem%C3%A1tica&url=https://profesergiojsw.rf.gd"
-                           class="share-btn twitter" target="_blank" rel="noopener" aria-label="Compartir en Twitter">
-                            <i class="bi bi-twitter-x"></i>
-                        </a>
-                        <a href="https://t.me/share/url?url=https://profesergiojsw.rf.gd&text=Recursos%20de%20Matem%C3%A1tica"
-                           class="share-btn telegram" target="_blank" rel="noopener" aria-label="Compartir en Telegram">
-                            <i class="bi bi-telegram"></i>
-                        </a>
-                        <button onclick="copyToClipboard()" class="share-btn copy" aria-label="Copiar enlace">
-                            <i class="bi bi-link-45deg"></i>
-                        </button>
                     </div>
-                    <ul class="list-unstyled mt-3">
-                        <li class="mb-2"><a href="https://liceoriosdechile.com" class="text-secondary text-decoration-none" target="_blank" rel="noopener"><i class="bi bi-globe me-1" aria-hidden="true"></i>Sitio del Liceo</a></li>
-                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-white mb-3">Cursos</h6>
+                    <div class="footer-links">
+                        <a href="cursos/matematica-7basico.html">7° Básico</a>
+                        <a href="cursos/matematica-1medio.html">1° Medio</a>
+                        <a href="cursos/matematica-2medio.html">2° Medio</a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-white mb-3">Recursos</h6>
+                    <div class="footer-links">
+                        <a href="videos.html">Videos</a>
+                        <a href="https://www.youtube.com/playlist?list=PL7E2F5Os0YfG2sNkUtahUjC9BF348Ky5F" target="_blank">Playlist 1°M</a>
+                        <a href="https://www.youtube.com/playlist?list=PL7E2F5Os0YfG6BZNHx8aV4CziWuyTYZB_" target="_blank">Playlist 2°M</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="text-white mb-3">Suscríbete</h6>
+                    <p class="text-secondary mb-3">No te pierdas los nuevos videos y recursos educativos.</p>
+                    <a href="https://www.youtube.com/@profesorsergiojsw?sub_confirmation=1" target="_blank" rel="noopener" class="btn btn-danger">
+                        <i class="bi bi-youtube me-2"></i>Suscribirse al Canal
+                    </a>
                 </div>
             </div>
             <hr class="my-4 border-secondary">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <small class="text-secondary">Año Escolar 2026 - Todos los recursos son de uso educativo</small>
+                    <small class="text-secondary">Año Escolar 2026 — Todos los recursos son de uso educativo</small>
                 </div>
-                <div class="col-md-6 text-md-end">
-                    <a href="#" class="text-secondary me-3" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" aria-label="Volver arriba">
-                        <i class="bi bi-arrow-up-circle" aria-hidden="true"></i> Volver arriba
+                <div class="col-md-6 text-md-end mt-2 mt-md-0">
+                    <a href="https://liceoriosdechile.com" target="_blank" rel="noopener" class="text-secondary text-decoration-none me-3">
+                        <i class="bi bi-globe me-1"></i>Sitio del Liceo
+                    </a>
+                    <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="text-secondary text-decoration-none">
+                        <i class="bi bi-arrow-up-circle me-1"></i>Volver arriba
                     </a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Modal de Búsqueda -->
-    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title" id="searchModalLabel"><i class="bi bi-search me-2"></i>Buscar Recursos</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <input type="text" class="form-control form-control-lg" id="modalSearchInput"
-                               placeholder="Ej: potencias, función lineal, fracciones...">
-                    </div>
-                    <div id="searchResults" class="list-group">
-                        <p class="text-muted text-center py-3">Escribe para buscar actividades, guías o videos</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Búsqueda Global -->
     <script>
-        // Índice de búsqueda
-        const searchIndex = [
-            {title: 'Potencias - Unidad 1', url: 'recursos/matematica-1medio/unidad1/actividades/', tags: 'potencias exponentes base'},
-            {title: 'Función Lineal - Unidad 2', url: 'recursos/matematica-1medio/unidad2/actividades/', tags: 'función lineal pendiente gráfico'},
-            {title: 'Geometría - Unidad 3', url: 'recursos/matematica-1medio/unidad3/actividades/', tags: 'geometría transformaciones vectores'},
-            {title: 'Probabilidad - Unidad 4', url: 'recursos/matematica-1medio/unidad4/actividades/', tags: 'probabilidad estadística datos'},
-            {title: 'Números Enteros - 7° Básico', url: 'recursos/matematica-7basico/unidad1/guias/', tags: 'enteros negativos positivos'},
-            {title: 'Fracciones - 7° Básico', url: 'recursos/matematica-7basico/unidad1/guias/', tags: 'fracciones decimales división'},
-            {title: 'Geometría - 7° Básico', url: 'recursos/matematica-7basico/unidad3/guias/', tags: 'círculo área perímetro pi'},
-            {title: 'Videos 1° Medio', url: 'recursos/matematica-1medio/unidad1/videos/', tags: 'videos clases tutoriales'},
-            {title: 'Videos 7° Básico', url: 'recursos/matematica-7basico/unidad1/videos/', tags: 'videos pueblos originarios'},
-        ];
-
-        // Función de búsqueda
-        function performSearch(query) {
-            const results = document.getElementById('searchResults');
-            if (query.length < 2) {
-                results.innerHTML = '<p class="text-muted text-center py-3">Escribe al menos 2 caracteres</p>';
-                return;
-            }
-            const q = query.toLowerCase();
-            const matches = searchIndex.filter(item =>
-                item.title.toLowerCase().includes(q) || item.tags.includes(q)
-            );
-            if (matches.length === 0) {
-                results.innerHTML = '<p class="text-muted text-center py-3">No se encontraron resultados</p>';
-            } else {
-                results.innerHTML = matches.map(m =>
-                    `<a href="${m.url}" class="list-group-item list-group-item-action">
-                        <i class="bi bi-folder2-open me-2 text-primary"></i>${m.title}
-                    </a>`
-                ).join('');
-            }
-        }
-
-        // Event listeners
-        document.getElementById('searchForm')?.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const modal = new bootstrap.Modal(document.getElementById('searchModal'));
-            document.getElementById('modalSearchInput').value = document.getElementById('searchInput').value;
-            performSearch(document.getElementById('searchInput').value);
-            modal.show();
-        });
-
-        document.getElementById('modalSearchInput')?.addEventListener('input', function(e) {
-            performSearch(e.target.value);
-        });
-
-        // Copiar enlace al portapapeles
-        function copyToClipboard() {
-            navigator.clipboard.writeText('https://profesergiojsw.rf.gd').then(() => {
-                const btn = document.querySelector('.share-btn.copy');
-                const originalIcon = btn.innerHTML;
-                btn.innerHTML = '<i class="bi bi-check2"></i>';
-                btn.style.background = '#22c55e';
-                setTimeout(() => {
-                    btn.innerHTML = originalIcon;
-                    btn.style.background = '#374151';
-                }, 2000);
-            });
-        }
-
-        // Registrar Service Worker
+        // Service Worker
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then(reg => console.log('Service Worker registrado'))
-                    .catch(err => console.log('Error SW:', err));
-            });
+            navigator.serviceWorker.register('/sw.js').catch(() => {});
         }
     </script>
 </body>

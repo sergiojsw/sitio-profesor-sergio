@@ -6,33 +6,598 @@
     <title>Solucionario Unidad 2 - Matemática 2° Medio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .sol-card { transition: transform 0.2s, box-shadow 0.2s; border-left: 4px solid #7c3aed; }
+        .sol-card:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .section-title { background: linear-gradient(135deg, #7c3aed, #6d28d9); color: white; padding: 0.75rem 1rem; border-radius: 8px; margin-bottom: 1rem; }
+    </style>
 </head>
 <body class="bg-light">
     <div class="container py-5">
         <div class="d-flex align-items-center mb-4">
-            <a href="../../../../cursos/matematica-2medio.html" class="btn btn-outline-danger me-3"><i class="bi bi-arrow-left"></i></a>
+            <a href="../../../../cursos/matematica-2medio.html" class="btn btn-outline-purple me-3" style="color:#7c3aed;border-color:#7c3aed;"><i class="bi bi-arrow-left"></i></a>
             <div>
-                <h2 class="mb-0 text-danger"><i class="bi bi-check2-circle me-2"></i>Solucionario</h2>
-                <p class="text-muted mb-0">Unidad 2 - Matemática 2° Medio</p>
+                <h2 class="mb-0" style="color:#7c3aed;"><i class="bi bi-check2-circle me-2"></i>Solucionario</h2>
+                <p class="text-muted mb-0">Unidad 2: Álgebra y Funciones - Matemática 2° Medio</p>
             </div>
         </div>
-        <div class="alert alert-danger"><i class="bi bi-files me-2"></i><strong>45 soluciones disponibles</strong></div>
-        <div class="row g-3" id="file-list"></div>
-    </div>
-    <script>
-        const files = ["U2_ACT_1_SOL.pdf","U2_ACT_2_SOL.pdf","U2_ACT_3_SOL.pdf","U2_ACT_4_SOL.pdf","U2_ACT_5_SOL.pdf","U2_ACT_6_SOL.pdf","U2_ACT_7_SOL.pdf","U2_ACT_8_SOL.pdf","U2_ACT_9_SOL.pdf","U2_ACT_10_SOL.pdf","U2_ACT_11_SOL.pdf","U2_ACT_12_SOL.pdf","U2_ACT_13_SOL.pdf","U2_ACT_14_SOL.pdf","U2_ACT_15_SOL.pdf","U2_ACT_16_SOL.pdf","U2_ACT_17_SOL.pdf","U2_ACT_18_SOL.pdf","U2_ACT_19_SOL.pdf","U2_ACT_20_SOL.pdf","U2_ACT_21_SOL.pdf","U2_ACT_22_SOL.pdf","U2_ACT_23_SOL.pdf","U2_ACT_24_SOL.pdf","U2_ACT_25_SOL.pdf","U2_ACT_26_SOL.pdf","U2_ACT_27_SOL.pdf","U2_ACT_28_SOL.pdf","U2_ACT_29_SOL.pdf","U2_ACT_30_SOL.pdf","U2_ACT_31_SOL.pdf","U2_ACT_32_SOL.pdf","U2_ACT_33_SOL.pdf","U2_ACT_34_SOL.pdf","U2_ACT_35_SOL.pdf","U2_ACT_36_SOL.pdf","U2_ACT_37_SOL.pdf","U2_ACT_38_SOL.pdf","U2_ACT_39_SOL.pdf","U2_ACT_40_SOL.pdf","U2_ACT_41_SOL.pdf","U2_ACT_42_SOL.pdf","U2_ACT_43_SOL.pdf","U2_ACT_44_SOL.pdf","U2_ACT_45_SOL.pdf"];
-        const container = document.getElementById('file-list');
-        files.forEach((file, i) => {
-            const name = file.replace('.pdf','').replace(/_/g,' ').replace('SOL','');
-            container.innerHTML += `<div class="col-md-6 col-lg-4">
-                <div class="card h-100 border-danger">
-                    <div class="card-body d-flex justify-content-between align-items-center">
-                        <div><h6 class="mb-0 small">${name}</h6></div>
-                        <a href="${file}" class="btn btn-sm btn-danger"><i class="bi bi-download"></i></a>
+
+        <div class="alert" style="background:rgba(124,58,237,0.1);border-color:#7c3aed;">
+            <i class="bi bi-info-circle me-2" style="color:#7c3aed;"></i>
+            <strong>45 soluciones disponibles</strong> - Respuestas detalladas para cada actividad de la unidad
+        </div>
+
+        <!-- Sección 1: Expresiones Algebraicas -->
+        <div class="section-title"><i class="bi bi-1-circle me-2"></i>Sección 1: Expresiones Algebraicas y Productos Notables</div>
+        <div class="row g-3 mb-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-success">Solución 1</span>
+                            <a href="U2_ACT_1_SOL.pdf" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Conocimientos Previos</h6>
+                        <p class="card-text small text-muted">Repaso de operaciones con expresiones algebraicas básicas.</p>
                     </div>
                 </div>
-            </div>`;
-        });
-    </script>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-success">Solución 2</span>
+                            <a href="U2_ACT_2_SOL.pdf" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Suma de Expresiones</h6>
+                        <p class="card-text small text-muted">Adición y sustracción de polinomios y términos semejantes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 3</span>
+                            <a href="U2_ACT_3_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Cuadrado de Binomio</h6>
+                        <p class="card-text small text-muted">Desarrollo de (a+b)² y (a-b)² con ejemplos resueltos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 4</span>
+                            <a href="U2_ACT_4_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Suma por Diferencia</h6>
+                        <p class="card-text small text-muted">Producto (a+b)(a-b) = a² - b² y aplicaciones.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 5</span>
+                            <a href="U2_ACT_5_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Cubo de Binomio</h6>
+                        <p class="card-text small text-muted">Desarrollo de (a+b)³ y (a-b)³ paso a paso.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-warning text-dark">Solución 6</span>
+                            <a href="U2_ACT_6_SOL.pdf" class="btn btn-sm btn-outline-warning"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Ejercitación Productos</h6>
+                        <p class="card-text small text-muted">Práctica combinada de todos los productos notables.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 2: Factorización -->
+        <div class="section-title"><i class="bi bi-2-circle me-2"></i>Sección 2: Factorización de Expresiones</div>
+        <div class="row g-3 mb-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-success">Solución 7</span>
+                            <a href="U2_ACT_7_SOL.pdf" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Factor Común</h6>
+                        <p class="card-text small text-muted">Extracción de factor común monomio y polinomio.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-success">Solución 8</span>
+                            <a href="U2_ACT_8_SOL.pdf" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Diferencia de Cuadrados</h6>
+                        <p class="card-text small text-muted">Factorización de a² - b² = (a+b)(a-b).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 9</span>
+                            <a href="U2_ACT_9_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Trinomio Cuadrado Perfecto</h6>
+                        <p class="card-text small text-muted">Identificación y factorización de TCP.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 10</span>
+                            <a href="U2_ACT_10_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Trinomio x² + bx + c</h6>
+                        <p class="card-text small text-muted">Factorización de trinomios con coeficiente principal 1.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 11</span>
+                            <a href="U2_ACT_11_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Trinomio ax² + bx + c</h6>
+                        <p class="card-text small text-muted">Factorización con coeficiente principal distinto de 1.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-warning text-dark">Solución 12</span>
+                            <a href="U2_ACT_12_SOL.pdf" class="btn btn-sm btn-outline-warning"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Práctica Factorización</h6>
+                        <p class="card-text small text-muted">Ejercicios combinados de todos los casos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 3: Ecuaciones -->
+        <div class="section-title"><i class="bi bi-3-circle me-2"></i>Sección 3: Ecuaciones y Sistemas</div>
+        <div class="row g-3 mb-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-success">Solución 13</span>
+                            <a href="U2_ACT_13_SOL.pdf" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Ecuaciones Lineales</h6>
+                        <p class="card-text small text-muted">Resolución de ecuaciones de primer grado.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-success">Solución 14</span>
+                            <a href="U2_ACT_14_SOL.pdf" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Ecuaciones con Fracciones</h6>
+                        <p class="card-text small text-muted">Ecuaciones racionales y literales.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 15</span>
+                            <a href="U2_ACT_15_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Ecuaciones Cuadráticas</h6>
+                        <p class="card-text small text-muted">Resolución por factorización y fórmula general.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 16</span>
+                            <a href="U2_ACT_16_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Fórmula Cuadrática</h6>
+                        <p class="card-text small text-muted">Aplicación de x = (-b ± √Δ) / 2a.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 17</span>
+                            <a href="U2_ACT_17_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Discriminante</h6>
+                        <p class="card-text small text-muted">Análisis de naturaleza de soluciones con Δ = b² - 4ac.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-warning text-dark">Solución 18</span>
+                            <a href="U2_ACT_18_SOL.pdf" class="btn btn-sm btn-outline-warning"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Problemas Aplicados</h6>
+                        <p class="card-text small text-muted">Problemas de área, tiempo y movimiento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 4: Funciones Cuadráticas -->
+        <div class="section-title"><i class="bi bi-4-circle me-2"></i>Sección 4: Funciones Cuadráticas</div>
+        <div class="row g-3 mb-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-success">Solución 19</span>
+                            <a href="U2_ACT_19_SOL.pdf" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Concepto de Función</h6>
+                        <p class="card-text small text-muted">Dominio, recorrido y regla de correspondencia.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-success">Solución 20</span>
+                            <a href="U2_ACT_20_SOL.pdf" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Función Cuadrática</h6>
+                        <p class="card-text small text-muted">Forma y = ax² + bx + c y sus elementos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 21</span>
+                            <a href="U2_ACT_21_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Gráfica de la Parábola</h6>
+                        <p class="card-text small text-muted">Trazado de parábolas y concavidad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 22</span>
+                            <a href="U2_ACT_22_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Vértice y Eje de Simetría</h6>
+                        <p class="card-text small text-muted">Cálculo del vértice (-b/2a, f(-b/2a)).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 23</span>
+                            <a href="U2_ACT_23_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Intersecciones con Ejes</h6>
+                        <p class="card-text small text-muted">Ceros de la función y corte con eje Y.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-warning text-dark">Solución 24</span>
+                            <a href="U2_ACT_24_SOL.pdf" class="btn btn-sm btn-outline-warning"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Análisis Completo</h6>
+                        <p class="card-text small text-muted">Estudio completo de funciones cuadráticas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 25</span>
+                            <a href="U2_ACT_25_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Forma Canónica</h6>
+                        <p class="card-text small text-muted">Conversión a forma y = a(x-h)² + k.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 26</span>
+                            <a href="U2_ACT_26_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Traslaciones</h6>
+                        <p class="card-text small text-muted">Desplazamientos horizontales y verticales de parábolas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 27</span>
+                            <a href="U2_ACT_27_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Máximos y Mínimos</h6>
+                        <p class="card-text small text-muted">Optimización usando función cuadrática.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-warning text-dark">Solución 28</span>
+                            <a href="U2_ACT_28_SOL.pdf" class="btn btn-sm btn-outline-warning"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Problemas de Optimización</h6>
+                        <p class="card-text small text-muted">Área máxima, ganancia máxima y aplicaciones.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-primary">Solución 29</span>
+                            <a href="U2_ACT_29_SOL.pdf" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Movimiento Parabólico</h6>
+                        <p class="card-text small text-muted">Trayectorias de proyectiles y altura máxima.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-warning text-dark">Solución 30</span>
+                            <a href="U2_ACT_30_SOL.pdf" class="btn btn-sm btn-outline-warning"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Práctica Funciones</h6>
+                        <p class="card-text small text-muted">Ejercicios combinados de funciones cuadráticas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 5: Ejercicios de Integración -->
+        <div class="section-title"><i class="bi bi-5-circle me-2"></i>Sección 5: Ejercicios de Integración</div>
+        <div class="row g-3 mb-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-secondary">Solución 31</span>
+                            <a href="U2_ACT_31_SOL.pdf" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Integración 1</h6>
+                        <p class="card-text small text-muted">Problemas de productos notables y factorización.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-secondary">Solución 32</span>
+                            <a href="U2_ACT_32_SOL.pdf" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Integración 2</h6>
+                        <p class="card-text small text-muted">Ecuaciones cuadráticas y análisis de soluciones.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-secondary">Solución 33</span>
+                            <a href="U2_ACT_33_SOL.pdf" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Integración 3</h6>
+                        <p class="card-text small text-muted">Funciones cuadráticas y gráficos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-secondary">Solución 34</span>
+                            <a href="U2_ACT_34_SOL.pdf" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Integración 4</h6>
+                        <p class="card-text small text-muted">Problemas de modelación con funciones.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-secondary">Solución 35</span>
+                            <a href="U2_ACT_35_SOL.pdf" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Integración 5</h6>
+                        <p class="card-text small text-muted">Ejercicios de preparación para evaluación.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-secondary">Solución 36</span>
+                            <a href="U2_ACT_36_SOL.pdf" class="btn btn-sm btn-outline-secondary"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Integración 6</h6>
+                        <p class="card-text small text-muted">Repaso final de álgebra y funciones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 6: Evaluaciones y Proyectos -->
+        <div class="section-title"><i class="bi bi-6-circle me-2"></i>Sección 6: Evaluaciones y Proyectos</div>
+        <div class="row g-3 mb-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-info">Solución 37</span>
+                            <a href="U2_ACT_37_SOL.pdf" class="btn btn-sm btn-outline-info"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Evaluación Diagnóstica</h6>
+                        <p class="card-text small text-muted">Pauta de evaluación diagnóstica de la unidad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-info">Solución 38</span>
+                            <a href="U2_ACT_38_SOL.pdf" class="btn btn-sm btn-outline-info"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Evaluación Formativa 1</h6>
+                        <p class="card-text small text-muted">Pauta de evaluación formativa - Factorización.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-info">Solución 39</span>
+                            <a href="U2_ACT_39_SOL.pdf" class="btn btn-sm btn-outline-info"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Evaluación Formativa 2</h6>
+                        <p class="card-text small text-muted">Pauta de evaluación formativa - Ecuaciones.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-danger">Solución 40</span>
+                            <a href="U2_ACT_40_SOL.pdf" class="btn btn-sm btn-outline-danger"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Evaluación Sumativa 1</h6>
+                        <p class="card-text small text-muted">Pauta de prueba - Álgebra.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-danger">Solución 41</span>
+                            <a href="U2_ACT_41_SOL.pdf" class="btn btn-sm btn-outline-danger"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Evaluación Sumativa 2</h6>
+                        <p class="card-text small text-muted">Pauta de prueba - Funciones.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-danger">Solución 42</span>
+                            <a href="U2_ACT_42_SOL.pdf" class="btn btn-sm btn-outline-danger"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Evaluación Final</h6>
+                        <p class="card-text small text-muted">Pauta de evaluación final de unidad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-dark">Solución 43</span>
+                            <a href="U2_ACT_43_SOL.pdf" class="btn btn-sm btn-outline-dark"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Proyecto 1</h6>
+                        <p class="card-text small text-muted">Modelación de trayectorias con GeoGebra.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-dark">Solución 44</span>
+                            <a href="U2_ACT_44_SOL.pdf" class="btn btn-sm btn-outline-dark"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Proyecto 2</h6>
+                        <p class="card-text small text-muted">Optimización en problemas de la vida real.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card sol-card h-100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-dark">Solución 45</span>
+                            <a href="U2_ACT_45_SOL.pdf" class="btn btn-sm btn-outline-dark"><i class="bi bi-download"></i></a>
+                        </div>
+                        <h6 class="card-title">Proyecto 3</h6>
+                        <p class="card-text small text-muted">Parábolas en arquitectura y diseño.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

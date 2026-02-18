@@ -21,14 +21,39 @@
     </div>
     <script>
         const files = ["01_Descubriendo_poblacion_muestra.pdf.pdf","02_Poblacion_y_muestra.pdf.pdf","03_Variable_estadistica.pdf","04_Frecuencia_absoluta.pdf.pdf","05_Frecuencia_realtiva.pdf","06_Tablas_frecuencias_aplicaciones.pdf.pdf","07_Grafico_de_barras.pdf","08_Grafico_de_lineas.pdf","09_Grafico_sector_circular.pdf.pdf","10_Que_grafico_usar.pdf","11_Trabajo_grupal_encuesta.pdf","12_Experimentos_aleatorios.pdf","13_Probabilidades_frecuencia_relativa.pdf","14_Calculo_de_probabilidades.pdf.pdf","15_Diagrama_de_arbol.pdf","16_Comparacion_de_probabilidades.pdf","17_Awarkuden.pdf"];
+
+        // Recursos multimedia asociados a guías específicas
+        const recursos = {
+            "01_Descubriendo_poblacion_muestra.pdf.pdf": {
+                videos: [{ title: "Inteligencia Artificial", url: "https://youtu.be/BbWLWVjebow" }]
+            },
+            "15_Diagrama_de_arbol.pdf": {
+                videos: [{ title: "Origami", url: "https://youtu.be/c75JhbM4Z8U" }]
+            }
+        };
+
         const container = document.getElementById('file-list');
         files.forEach((file, i) => {
             const name = file.replace(/\.pdf$/i,'').replace(/\.pdf$/i,'').replace(/_/g,' ');
             const solFile = file.replace(/\.pdf$/i,'').replace(/\.pdf$/i,'') + '_SOL.pdf';
+            const recurso = recursos[file] || {};
+
+            let videoHtml = '';
+            if (recurso.videos) {
+                const videoLinks = recurso.videos.map(v =>
+                    `<a href="${v.url}" target="_blank" class="btn btn-sm btn-outline-danger mb-1"><i class="bi bi-youtube me-1"></i>${v.title}</a>`
+                ).join(' ');
+                videoHtml = `<div class="bg-danger bg-opacity-10 rounded p-2 mb-2">
+                    <small class="text-danger fw-bold d-block mb-1"><i class="bi bi-play-circle me-1"></i>Video de apoyo:</small>
+                    ${videoLinks}
+                </div>`;
+            }
+
             container.innerHTML += `<div class="col-md-6">
                 <div class="card h-100">
                     <div class="card-body">
                         <h6 class="mb-3"><i class="bi bi-file-text text-success me-2"></i>${name}</h6>
+                        ${videoHtml}
                         <div class="btn-group w-100">
                             <a href="${file}" class="btn btn-success btn-sm" download><i class="bi bi-file-earmark-pdf me-1"></i>Guía</a>
                             <a href="../solucionario/${solFile}" class="btn btn-outline-success btn-sm" download><i class="bi bi-check2-circle me-1"></i>Solución</a>
