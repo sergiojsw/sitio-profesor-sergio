@@ -6,28 +6,33 @@
     <title>Solucionario Unidad 3 - Matemática 7° Básico</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <style>
-        .solution-card { transition: transform 0.2s; border-left: 4px solid #059669; }
-        .solution-card:hover { transform: translateY(-3px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-    </style>
 </head>
 <body class="bg-light">
     <div class="container py-5">
         <div class="d-flex align-items-center mb-4">
             <a href="../../../../cursos/matematica-7basico.html" class="btn btn-outline-success me-3"><i class="bi bi-arrow-left"></i></a>
             <div>
-                <h2 class="mb-0 text-success">Solucionario Unidad 3</h2>
-                <p class="text-muted mb-0">Matemática 7° Básico</p>
+                <h2 class="mb-0 text-success"><i class="bi bi-check2-circle me-2"></i>Solucionario</h2>
+                <p class="text-muted mb-0">Unidad 3 - Matemática 7° Básico</p>
             </div>
         </div>
-        <div class="alert alert-success"><i class="bi bi-check-circle me-2"></i><strong>32 solucionarios disponibles</strong></div>
+        <div class="alert alert-success"><i class="bi bi-files me-2"></i><strong>32 soluciones disponibles</strong></div>
         <div class="row g-3" id="file-list"></div>
     </div>
     <script>
+        const files = ["01_Evaluacion_diagnostica_U3_SOL.pdf","01_Plano_cartesiano_SOL.pdf","01_Proyecto_interdisciplinar_U3_SOL.pdf","02_Evaluacion_formativa_L6_SOL.pdf","02_Proyecto_matematico_U3_SOL.pdf","02_Vectores_SOL.pdf","03_Circunferencia_circulo_elementos_SOL.pdf","03_Evaluacion_formativa_L7_SOL.pdf","03_Matematica_medioambiente_U3_SOL.pdf","04_El_numero_pi_SOL.pdf","04_Evaluacion_formativa_L8_SOL.pdf","05_Evaluacion_sumativa_U3_SOL.pdf","05_Perimetro_circunferencia_SOL.pdf","06_Descubriendo_area_circulo_SOL.pdf","07_Area_circulo_SOL.pdf","08_Rectas_paralelas_perpendiculares_SOL.pdf","09_Arte_paralelas_perpendiculares_SOL.pdf","10_Congruencia_SOL.pdf","11_Taller_Construyamos_triangulos_SOL.pdf","12_Triangulos_congruentes_SOL.pdf","13_Taller_Construyamos_cuadrilateros_SOL.pdf","14_Cuadrilateros_congruentes_SOL.pdf","15_Punto_medio_segmento_SOL.pdf","16_Simetral_o_mediatriz_SOL.pdf","17_Bisectriz_SOL.pdf","18_Bicetrices_en_Geogebra_SOL.pdf","19_Incentro_y_bisectrices_SOL.pdf","20_Construccion de alturas_SOL.pdf","21_Ortocentro_y_alturas_SOL.pdf","22_Construccion_de_transversales_SOL.pdf","23_Taller_equilibremos_triangulos_SOL.pdf","24_Baricentro_y_transversales_SOL.pdf"];
         const container = document.getElementById('file-list');
-        for(let i=1; i<=32; i++) {
-            container.innerHTML += '<div class="col-md-6 col-lg-4"><div class="card solution-card h-100"><div class="card-body d-flex justify-content-between align-items-center"><div><h6 class="mb-0">Solucionario '+i+'</h6></div><a href="sol_'+i+'.pdf" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a></div></div></div>';
-        }
+        files.forEach((file, i) => {
+            const name = file.replace('.pdf','').replace(/_/g,' ').replace('SOL','');
+            container.innerHTML += `<div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-success">
+                    <div class="card-body d-flex justify-content-between align-items-center">
+                        <div><h6 class="mb-0 small">${name}</h6></div>
+                        <a href="${file}" class="btn btn-sm btn-success"><i class="bi bi-download"></i></a>
+                    </div>
+                </div>
+            </div>`;
+        });
     </script>
 </body>
 </html>

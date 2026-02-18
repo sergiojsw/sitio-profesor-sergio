@@ -3,26 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guias - Matematica 7 Basico</title>
+    <title>Guías Unidad 4 - Matemática 7° Básico</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body class="bg-light">
     <div class="container py-5">
-        <div class="card">
-            <div class="card-header bg-success text-white">
-                <h5 class="mb-0"><i class="bi bi-file-earmark-text me-2"></i>Guias de Trabajo</h5>
-            </div>
-            <div class="card-body">
-                <p>Descarga las guias disponibles en esta carpeta:</p>
-                <div class="list-group" id="file-list"></div>
+        <div class="d-flex align-items-center mb-4">
+            <a href="../../../../cursos/matematica-7basico.html" class="btn btn-outline-success me-3"><i class="bi bi-arrow-left"></i></a>
+            <div>
+                <h2 class="mb-0 text-success"><i class="bi bi-file-earmark-text me-2"></i>Guías de Trabajo</h2>
+                <p class="text-muted mb-0">Unidad 4 - Matemática 7° Básico</p>
             </div>
         </div>
-        <div class="mt-3">
-            <a href="../../../../cursos/matematica-7basico.html" class="btn btn-outline-success">
-                <i class="bi bi-arrow-left me-2"></i>Volver
-            </a>
-        </div>
+        <div class="alert alert-success"><i class="bi bi-files me-2"></i><strong>17 guías disponibles</strong></div>
+        <div class="row g-3" id="file-list"></div>
     </div>
+    <script>
+        const files = ["01_Descubriendo_poblacion_muestra.pdf.pdf","02_Poblacion_y_muestra.pdf.pdf","03_Variable_estadistica.pdf","04_Frecuencia_absoluta.pdf.pdf","05_Frecuencia_realtiva.pdf","06_Tablas_frecuencias_aplicaciones.pdf.pdf","07_Grafico_de_barras.pdf","08_Grafico_de_lineas.pdf","09_Grafico_sector_circular.pdf.pdf","10_Que_grafico_usar.pdf","11_Trabajo_grupal_encuesta.pdf","12_Experimentos_aleatorios.pdf","13_Probabilidades_frecuencia_relativa.pdf","14_Calculo_de_probabilidades.pdf.pdf","15_Diagrama_de_arbol.pdf","16_Comparacion_de_probabilidades.pdf","17_Awarkuden.pdf"];
+        const container = document.getElementById('file-list');
+        files.forEach((file, i) => {
+            const name = file.replace('.pdf','').replace(/_/g,' ');
+            container.innerHTML += `<div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body d-flex justify-content-between align-items-center">
+                        <h6 class="mb-0 small">${name}</h6>
+                        <a href="${file}" class="btn btn-sm btn-outline-success"><i class="bi bi-download"></i></a>
+                    </div>
+                </div>
+            </div>`;
+        });
+    </script>
 </body>
 </html>

@@ -16,14 +16,23 @@
                 <p class="text-muted mb-0">Unidad 1 - Matemática 7° Básico</p>
             </div>
         </div>
-        <div class="alert alert-success"><i class="bi bi-leaf me-2"></i>3 proyectos disponibles</div>
+        <div class="alert alert-success"><i class="bi bi-leaf me-2"></i><strong>3 proyectos disponibles</strong></div>
         <div class="row g-3" id="file-list"></div>
     </div>
     <script>
+        const files = ["01_Proyecto_interdisciplinario_U1.pdf","02_Proyecto_Matematico_U1.pdf","03_Matematica_medioambiente_U1.pdf.pdf"];
         const container = document.getElementById('file-list');
-        for(let i=1; i<=3; i++) {
-            container.innerHTML += '<div class="col-md-6"><div class="card h-100 border-success"><div class="card-body"><h6><i class="bi bi-journal-richtext text-success me-2"></i>Proyecto '+i+'</h6><a href="proy_'+i+'.pdf" class="btn btn-success mt-2"><i class="bi bi-download me-2"></i>Descargar</a></div></div></div>';
-        }
+        files.forEach((file, i) => {
+            const name = file.replace('.pdf','').replace(/_/g,' ');
+            container.innerHTML += `<div class="col-md-6">
+                <div class="card h-100 border-success">
+                    <div class="card-body">
+                        <h6 class="card-title"><i class="bi bi-journal-richtext text-success me-2"></i>${name}</h6>
+                        <a href="${file}" class="btn btn-success"><i class="bi bi-download me-2"></i>Descargar</a>
+                    </div>
+                </div>
+            </div>`;
+        });
     </script>
 </body>
 </html>
