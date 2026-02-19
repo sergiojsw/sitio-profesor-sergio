@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unidad 2: Álgebra y Funciones - Matemática 2° Medio</title>
+    <title>Unidad 2: Funciones - Matematica 2 Medio</title>
+    <meta name="description" content="Recursos de la Unidad 2 de Matematica 2 Medio: Funcion cuadratica, funcion raiz cuadrada y composicion de funciones. 45 actividades con solucionario.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .multimedia-item { background: #f8f9fa; border-radius: 8px; padding: 1rem; margin-bottom: 0.5rem; }
-        .activity-row { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem; border-bottom: 1px solid #eee; }
+        .unit-header { background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); }
+        .topic-badge { font-size: 0.85rem; }
+        .multimedia-card { transition: transform 0.2s; }
+        .multimedia-card:hover { transform: translateY(-2px); }
+        .activity-row { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; border-bottom: 1px solid #eee; }
+        .activity-row:hover { background: #f8f9fa; }
+        .type-badge { font-size: 0.7rem; padding: 0.25rem 0.5rem; }
+        .filter-btn.active { background: #7c3aed !important; color: white !important; }
     </style>
 </head>
 <body class="bg-light">
@@ -26,45 +33,303 @@
             </div>
         </div>
     </nav>
-    <div class="container py-4">
-        <div class="d-flex align-items-center mb-4">
-            <a href="../../../cursos/matematica-2medio.html" class="btn me-3" style="background:#7c3aed;color:white"><i class="bi bi-arrow-left"></i></a>
-            <div>
-                <h2 class="mb-0" style="color:#7c3aed"><i class="bi bi-2-circle me-2"></i>Unidad 2: Álgebra y Funciones</h2>
-                <p class="text-muted mb-0">Matemática 2° Medio - Todos los recursos</p>
+
+    <!-- Header de la Unidad -->
+    <div class="unit-header text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb breadcrumb-light mb-2" style="--bs-breadcrumb-divider-color: rgba(255,255,255,0.5);">
+                            <li class="breadcrumb-item"><a href="../../../index.html" class="text-white-50">Inicio</a></li>
+                            <li class="breadcrumb-item"><a href="../../../cursos/matematica-2medio.html" class="text-white-50">2 Medio</a></li>
+                            <li class="breadcrumb-item active text-white">Unidad 2</li>
+                        </ol>
+                    </nav>
+                    <h1 class="display-6 fw-bold mb-2">
+                        <i class="bi bi-2-circle-fill me-2"></i>Unidad 2: Funciones
+                    </h1>
+                    <p class="lead opacity-90 mb-3">Funcion cuadratica, funcion raiz cuadrada y composicion de funciones</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge bg-white text-purple topic-badge" style="color: #7c3aed;">
+                            <i class="bi bi-graph-up me-1"></i>Funcion Cuadratica
+                        </span>
+                        <span class="badge bg-white text-purple topic-badge" style="color: #7c3aed;">
+                            <i class="bi bi-sqrt me-1"></i>Funcion Raiz Cuadrada
+                        </span>
+                        <span class="badge bg-white text-purple topic-badge" style="color: #7c3aed;">
+                            <i class="bi bi-layers me-1"></i>Composicion de Funciones
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                    <div class="bg-white bg-opacity-10 rounded p-3">
+                        <div class="row text-center g-2">
+                            <div class="col-6">
+                                <h3 class="mb-0 fw-bold" id="count-act">45</h3>
+                                <small class="opacity-75">Actividades</small>
+                            </div>
+                            <div class="col-6">
+                                <h3 class="mb-0 fw-bold" id="count-sol">45</h3>
+                                <small class="opacity-75">Soluciones</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row g-3 mb-4">
-            <div class="col-6 col-md-3"><div class="card text-center" style="border-color:#7c3aed"><div class="card-body py-3"><i class="bi bi-file-earmark-pdf display-6" style="color:#7c3aed"></i><h3 class="mb-0" id="count-act">-</h3><small class="text-muted">Actividades</small></div></div></div>
-            <div class="col-6 col-md-3"><div class="card text-center border-success"><div class="card-body py-3"><i class="bi bi-check2-circle text-success display-6"></i><h3 class="mb-0" id="count-sol">-</h3><small class="text-muted">Solucionarios</small></div></div></div>
-            <div class="col-6 col-md-3"><div class="card text-center border-danger"><div class="card-body py-3"><i class="bi bi-play-circle text-danger display-6"></i><h3 class="mb-0" id="count-vid">-</h3><small class="text-muted">Videos</small></div></div></div>
-            <div class="col-6 col-md-3"><div class="card text-center border-warning"><div class="card-body py-3"><i class="bi bi-music-note text-warning display-6"></i><h3 class="mb-0" id="count-aud">-</h3><small class="text-muted">Audios</small></div></div></div>
-        </div>
-        <div class="card mb-4"><div class="card-header bg-danger text-white"><h5 class="mb-0"><i class="bi bi-collection-play me-2"></i>Recursos Multimedia</h5></div><div class="card-body"><div class="row" id="multimedia-content"></div></div></div>
-        <div class="card"><div class="card-header text-white d-flex justify-content-between align-items-center" style="background:#7c3aed"><h5 class="mb-0"><i class="bi bi-journal-text me-2"></i>Actividades y Solucionarios</h5><input type="text" class="form-control form-control-sm w-auto" placeholder="Buscar..." id="search-input"></div><div class="card-body p-0"><div class="list-group list-group-flush" id="activities-list"></div></div></div>
     </div>
+
+    <div class="container py-4">
+        <!-- Descripcion del contenido -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-info-circle me-2 text-primary"></i>Contenido de la Unidad</h5>
+                <p class="card-text text-muted">
+                    En esta unidad trabajaras con <strong>funciones cuadraticas</strong>, analizando su grafica (parabola),
+                    vertices, ejes de simetria e intersecciones. Tambien estudiaras la <strong>funcion raiz cuadrada</strong>
+                    y sus propiedades, ademas de aprender a realizar <strong>composicion de funciones</strong>.
+                </p>
+                <div class="row g-3 mt-2">
+                    <div class="col-md-4">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            <small>Grafica de parabolas</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            <small>Vertices y ejes de simetria</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            <small>Composicion (f o g)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recursos Multimedia -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-header bg-white border-0 py-3">
+                <h5 class="mb-0"><i class="bi bi-collection-play text-danger me-2"></i>Recursos Multimedia</h5>
+            </div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <!-- Audio -->
+                    <div class="col-md-6">
+                        <div class="card multimedia-card h-100 border-warning">
+                            <div class="card-body">
+                                <h6 class="text-warning mb-3"><i class="bi bi-music-note-beamed me-2"></i>Audio de la Unidad</h6>
+                                <div class="d-flex align-items-center justify-content-between bg-light rounded p-3">
+                                    <div>
+                                        <i class="bi bi-soundwave text-warning me-2"></i>
+                                        <span>Introduccion a Funciones</span>
+                                    </div>
+                                    <a href="audios/1_audio.mp3" class="btn btn-warning btn-sm" download>
+                                        <i class="bi bi-download"></i>
+                                    </a>
+                                </div>
+                                <div class="mt-3">
+                                    <audio controls class="w-100" style="height: 40px;">
+                                        <source src="audios/1_audio.mp3" type="audio/mpeg">
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Videos YouTube -->
+                    <div class="col-md-6">
+                        <div class="card multimedia-card h-100 border-danger">
+                            <div class="card-body">
+                                <h6 class="text-danger mb-3"><i class="bi bi-youtube me-2"></i>Videos de la Unidad</h6>
+                                <p class="text-muted small mb-2">Videos disponibles en la pagina del curso:</p>
+                                <a href="../../../cursos/matematica-2medio.html#unidad2" class="btn btn-outline-danger w-100">
+                                    <i class="bi bi-play-circle me-2"></i>Ver videos de Funciones
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filtros -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-header bg-white border-0 py-3">
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+                    <h5 class="mb-0"><i class="bi bi-journal-text me-2" style="color: #7c3aed;"></i>Actividades y Solucionarios</h5>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <button class="btn btn-sm btn-outline-secondary filter-btn active" data-filter="all">Todas</button>
+                        <button class="btn btn-sm btn-outline-primary filter-btn" data-filter="refuerzo">
+                            <i class="bi bi-arrow-repeat me-1"></i>Refuerzo
+                        </button>
+                        <button class="btn btn-sm btn-outline-success filter-btn" data-filter="ejercitacion">
+                            <i class="bi bi-pencil me-1"></i>Ejercitacion
+                        </button>
+                        <button class="btn btn-sm btn-outline-warning filter-btn" data-filter="ampliacion">
+                            <i class="bi bi-arrows-expand me-1"></i>Ampliacion
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger filter-btn" data-filter="profundizacion">
+                            <i class="bi bi-bullseye me-1"></i>Profundizacion
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-header bg-light py-2">
+                <input type="text" class="form-control form-control-sm" placeholder="Buscar actividad..." id="search-input">
+            </div>
+            <div class="card-body p-0">
+                <div class="list-group list-group-flush" id="activities-list"></div>
+            </div>
+        </div>
+
+        <!-- Leyenda -->
+        <div class="card border-0 bg-light">
+            <div class="card-body py-3">
+                <h6 class="mb-2"><i class="bi bi-lightbulb me-2"></i>Tipos de Actividades</h6>
+                <div class="row g-2">
+                    <div class="col-6 col-md-3">
+                        <span class="badge bg-primary me-1">Refuerzo</span>
+                        <small class="text-muted">Practica basica</small>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <span class="badge bg-success me-1">Ejercitacion</span>
+                        <small class="text-muted">Nivel intermedio</small>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <span class="badge bg-warning text-dark me-1">Ampliacion</span>
+                        <small class="text-muted">Mas desafio</small>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <span class="badge bg-danger me-1">Profundizacion</span>
+                        <small class="text-muted">Nivel avanzado</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="bg-dark text-white py-4 mt-5">
         <div class="container text-center">
             <p class="mb-1"><i class="bi bi-mortarboard-fill me-2"></i>Prof. Sergio Seguel</p>
             <small class="text-secondary">Liceo Rios de Chile, Lirquen - Ano Escolar 2026</small>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        const actividades = ["1_refuerzo.pdf","2_refuerzo.pdf","3_ejercitacion.pdf","4_ampliacion.pdf","5_profundizacion.pdf","6_refuerzo.pdf","7_refuerzo.pdf","8_refuerzo.pdf","9_ejercitacion.pdf","10_ampliacion.pdf","11_profundizacion.pdf","12_refuerzo.pdf","13_refuerzo.pdf","14_refuerzo.pdf","15_refuerzo.pdf","16_ejercitacion.pdf","17_ampliacion.pdf","18_profundizacion.pdf","19_refuerzo.pdf","20_refuerzo.pdf","21_ejercitacion.pdf","22_ampliacion.pdf","23_profundizacion.pdf","24_refuerzo.pdf","25_refuerzo.pdf","26_ejercitacion.pdf","27_ampliacion.pdf","28_profundizacion.pdf","29_refuerzo.pdf","30_refuerzo.pdf","31_ejercitacion.pdf","32_ampliacion.pdf","33_profundizacion.pdf","34_refuerzo.pdf","35_refuerzo.pdf","36_ejercitacion.pdf","37_ampliacion.pdf","38_profundizacion.pdf","39_refuerzo.pdf","40_refuerzo.pdf","41_ejercitacion.pdf","42_ampliacion.pdf","43_profundizacion.pdf","44_refuerzo.pdf","45_ampliacion.pdf"];
-        const videos = [];
-        const audios = ["1_audio.mp3"];
-        document.getElementById('count-act').textContent = actividades.length;
-        document.getElementById('count-sol').textContent = actividades.length;
-        document.getElementById('count-vid').textContent = videos.length;
-        document.getElementById('count-aud').textContent = audios.length;
-        const mc = document.getElementById('multimedia-content');
-        let h = '';
-        if (videos.length) { h += '<div class="col-md-6"><h6 class="text-danger mb-3"><i class="bi bi-camera-video me-2"></i>Videos</h6>'; videos.forEach(v => { h += '<div class="multimedia-item d-flex justify-content-between align-items-center"><span><i class="bi bi-play-circle text-danger me-2"></i>'+v.replace('.mp4','').replace(/_/g,' ')+'</span><a href="videos/'+v+'" class="btn btn-sm btn-outline-danger" download><i class="bi bi-download"></i></a></div>'; }); h += '</div>'; }
-        if (audios.length) { h += '<div class="col-md-6"><h6 class="text-warning mb-3"><i class="bi bi-music-note-beamed me-2"></i>Audios</h6>'; audios.forEach(a => { h += '<div class="multimedia-item d-flex justify-content-between align-items-center"><span><i class="bi bi-music-note text-warning me-2"></i>'+a.replace(/\.(mp3|rar|wav)$/i,'').replace(/_/g,' ')+'</span><a href="audios/'+a+'" class="btn btn-sm btn-outline-warning" download><i class="bi bi-download"></i></a></div>'; }); h += '</div>'; }
-        mc.innerHTML = h || '<p class="text-muted">No hay recursos multimedia.</p>';
+        const actividades = [
+            {num: 1, tipo: "refuerzo", tema: "Concepto de funcion cuadratica"},
+            {num: 2, tipo: "refuerzo", tema: "Elementos de la parabola"},
+            {num: 3, tipo: "ejercitacion", tema: "Graficar parabolas basicas"},
+            {num: 4, tipo: "ampliacion", tema: "Parabolas con traslaciones"},
+            {num: 5, tipo: "profundizacion", tema: "Analisis completo de parabolas"},
+            {num: 6, tipo: "refuerzo", tema: "Vertice de la parabola"},
+            {num: 7, tipo: "refuerzo", tema: "Eje de simetria"},
+            {num: 8, tipo: "refuerzo", tema: "Concavidad de la parabola"},
+            {num: 9, tipo: "ejercitacion", tema: "Calcular vertice y eje"},
+            {num: 10, tipo: "ampliacion", tema: "Problemas de vertices"},
+            {num: 11, tipo: "profundizacion", tema: "Desafios de parabolas"},
+            {num: 12, tipo: "refuerzo", tema: "Interseccion con eje Y"},
+            {num: 13, tipo: "refuerzo", tema: "Interseccion con eje X"},
+            {num: 14, tipo: "refuerzo", tema: "Raices de la funcion cuadratica"},
+            {num: 15, tipo: "refuerzo", tema: "Discriminante y raices"},
+            {num: 16, tipo: "ejercitacion", tema: "Calcular intersecciones"},
+            {num: 17, tipo: "ampliacion", tema: "Problemas de intersecciones"},
+            {num: 18, tipo: "profundizacion", tema: "Analisis de raices"},
+            {num: 19, tipo: "refuerzo", tema: "Forma canonica"},
+            {num: 20, tipo: "refuerzo", tema: "Forma factorizada"},
+            {num: 21, tipo: "ejercitacion", tema: "Conversion entre formas"},
+            {num: 22, tipo: "ampliacion", tema: "Problemas de formas"},
+            {num: 23, tipo: "profundizacion", tema: "Desafios de conversion"},
+            {num: 24, tipo: "refuerzo", tema: "Concepto de raiz cuadrada"},
+            {num: 25, tipo: "refuerzo", tema: "Funcion raiz cuadrada"},
+            {num: 26, tipo: "ejercitacion", tema: "Graficar funcion raiz"},
+            {num: 27, tipo: "ampliacion", tema: "Traslaciones de funcion raiz"},
+            {num: 28, tipo: "profundizacion", tema: "Analisis de funcion raiz"},
+            {num: 29, tipo: "refuerzo", tema: "Dominio de funcion raiz"},
+            {num: 30, tipo: "refuerzo", tema: "Recorrido de funcion raiz"},
+            {num: 31, tipo: "ejercitacion", tema: "Dominio y recorrido"},
+            {num: 32, tipo: "ampliacion", tema: "Problemas de dominio"},
+            {num: 33, tipo: "profundizacion", tema: "Desafios de funcion raiz"},
+            {num: 34, tipo: "refuerzo", tema: "Concepto de composicion"},
+            {num: 35, tipo: "refuerzo", tema: "Notacion (f o g)(x)"},
+            {num: 36, tipo: "ejercitacion", tema: "Calcular composiciones"},
+            {num: 37, tipo: "ampliacion", tema: "Composicion de cuadraticas"},
+            {num: 38, tipo: "profundizacion", tema: "Desafios de composicion"},
+            {num: 39, tipo: "refuerzo", tema: "Composicion con raiz cuadrada"},
+            {num: 40, tipo: "refuerzo", tema: "Dominio de composicion"},
+            {num: 41, tipo: "ejercitacion", tema: "Problemas de composicion"},
+            {num: 42, tipo: "ampliacion", tema: "Aplicaciones de funciones"},
+            {num: 43, tipo: "profundizacion", tema: "Desafios de aplicaciones"},
+            {num: 44, tipo: "refuerzo", tema: "Repaso de la unidad"},
+            {num: 45, tipo: "ampliacion", tema: "Evaluacion formativa"}
+        ];
+
+        const tipoConfig = {
+            refuerzo: {badge: 'bg-primary', icon: 'bi-arrow-repeat', label: 'Refuerzo'},
+            ejercitacion: {badge: 'bg-success', icon: 'bi-pencil', label: 'Ejercitacion'},
+            ampliacion: {badge: 'bg-warning text-dark', icon: 'bi-arrows-expand', label: 'Ampliacion'},
+            profundizacion: {badge: 'bg-danger', icon: 'bi-bullseye', label: 'Profundizacion'}
+        };
+
         const list = document.getElementById('activities-list');
-        actividades.forEach(act => { const num = act.match(/\d+/g).pop(); list.innerHTML += '<div class="list-group-item activity-row" data-name="actividad '+num+'"><div><strong>Actividad '+num+'</strong></div><div class="btn-group"><a href="actividades/'+act+'" class="btn btn-sm" style="background:#7c3aed;color:white" download><i class="bi bi-file-earmark-pdf me-1"></i>PDF</a><a href="solucionario/'+act.replace(".pdf","_SOL.pdf")+'" class="btn btn-sm btn-success" download><i class="bi bi-check2-circle me-1"></i>Solución</a></div></div>'; });
-        document.getElementById('search-input').addEventListener('input', e => { document.querySelectorAll('.activity-row').forEach(r => r.style.display = r.dataset.name.includes(e.target.value.toLowerCase()) ? '' : 'none'); });
+
+        function renderActivities(filter = 'all', search = '') {
+            list.innerHTML = '';
+            actividades.forEach(act => {
+                if (filter !== 'all' && act.tipo !== filter) return;
+                if (search && !act.tema.toLowerCase().includes(search.toLowerCase()) && !act.num.toString().includes(search)) return;
+
+                const cfg = tipoConfig[act.tipo];
+                const filename = `${act.num}_${act.tipo}.pdf`;
+                const solFilename = `${act.num}_${act.tipo}_SOL.pdf`;
+
+                list.innerHTML += `
+                    <div class="list-group-item activity-row" data-tipo="${act.tipo}" data-name="${act.tema.toLowerCase()}">
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="badge ${cfg.badge} type-badge">
+                                <i class="bi ${cfg.icon} me-1"></i>${cfg.label}
+                            </span>
+                            <div>
+                                <strong>Actividad ${act.num}</strong>
+                                <small class="text-muted d-block">${act.tema}</small>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                            <a href="actividades/${filename}" class="btn btn-sm" style="background:#7c3aed;color:white" download title="Descargar PDF">
+                                <i class="bi bi-file-earmark-pdf me-1"></i>PDF
+                            </a>
+                            <a href="solucionario/${solFilename}" class="btn btn-sm btn-success" download title="Descargar Solucion">
+                                <i class="bi bi-check2-circle me-1"></i>Solucion
+                            </a>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        renderActivities();
+
+        // Filtros
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                renderActivities(btn.dataset.filter, document.getElementById('search-input').value);
+            });
+        });
+
+        // Busqueda
+        document.getElementById('search-input').addEventListener('input', e => {
+            const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
+            renderActivities(activeFilter, e.target.value);
+        });
     </script>
 </body>
 </html>

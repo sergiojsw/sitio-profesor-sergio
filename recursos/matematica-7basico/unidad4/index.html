@@ -3,72 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unidad 4: Datos y Azar - Matemática 7° Básico</title>
+    <title>Unidad 4: Datos y Azar - Matematica 7 Basico</title>
+    <meta name="description" content="Recursos de la Unidad 4 de Matematica 7 Basico: Poblacion y muestra, frecuencias, graficos estadisticos y probabilidades. 17 guias con solucionario.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .multimedia-item { background: #f8f9fa; border-radius: 8px; padding: 1rem; margin-bottom: 0.5rem; }
-        .activity-row { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem; border-bottom: 1px solid #eee; }
+        .unit-header { background: linear-gradient(135deg, #059669 0%, #047857 100%); }
+        .topic-badge { font-size: 0.85rem; }
+        .multimedia-card { transition: transform 0.2s; }
+        .multimedia-card:hover { transform: translateY(-2px); }
+        .guia-row { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; border-bottom: 1px solid #eee; }
+        .guia-row:hover { background: #f8f9fa; }
+        .video-item { background: #f8f9fa; border-radius: 8px; padding: 1rem; margin-bottom: 0.5rem; }
+        .app-item { background: #f0f9ff; border-radius: 8px; padding: 1rem; margin-bottom: 0.5rem; }
     </style>
 </head>
 <body class="bg-light">
-<nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
-    <div class="container">
-        <a class="navbar-brand fw-bold" href="../../../index.html">
-            <i class="bi bi-mortarboard-fill me-2"></i>Prof. Sergio
-        </a>
-        <div class="ms-auto">
-            <a href="../../../cursos/matematica-7basico.html" class="btn btn-outline-light btn-sm">
-                <i class="bi bi-arrow-left me-1"></i>Volver al curso
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background: #059669;">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../../../index.html">
+                <i class="bi bi-mortarboard-fill me-2"></i>Prof. Sergio
             </a>
-        </div>
-    </div>
-</nav>
-    <div class="container py-4">
-        <div class="d-flex align-items-center mb-4">
-            <a href="../../../cursos/matematica-7basico.html" class="btn btn-success me-3"><i class="bi bi-arrow-left"></i></a>
-            <div>
-                <h2 class="mb-0 text-success"><i class="bi bi-4-circle me-2"></i>Unidad 4: Datos y Azar</h2>
-                <p class="text-muted mb-0">Matemática 7° Básico - Todos los recursos</p>
+            <div class="ms-auto">
+                <a href="../../../cursos/matematica-7basico.html" class="btn btn-outline-light btn-sm">
+                    <i class="bi bi-arrow-left me-1"></i>Volver al curso
+                </a>
             </div>
         </div>
-        <div class="row g-3 mb-4">
-            <div class="col-6 col-md-3"><div class="card text-center border-success"><div class="card-body py-3"><i class="bi bi-file-earmark-text text-success display-6"></i><h3 class="mb-0" id="count-guias">-</h3><small class="text-muted">Guías</small></div></div></div>
-            <div class="col-6 col-md-3"><div class="card text-center border-primary"><div class="card-body py-3"><i class="bi bi-check2-circle text-primary display-6"></i><h3 class="mb-0" id="count-sol">-</h3><small class="text-muted">Solucionarios</small></div></div></div>
-            <div class="col-6 col-md-3"><div class="card text-center border-danger"><div class="card-body py-3"><i class="bi bi-play-circle text-danger display-6"></i><h3 class="mb-0" id="count-vid">-</h3><small class="text-muted">Videos</small></div></div></div>
-            <div class="col-6 col-md-3"><div class="card text-center border-info"><div class="card-body py-3"><i class="bi bi-laptop text-info display-6"></i><h3 class="mb-0" id="count-apps">-</h3><small class="text-muted">Apps</small></div></div></div>
+    </nav>
+
+    <!-- Header de la Unidad -->
+    <div class="unit-header text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb breadcrumb-light mb-2" style="--bs-breadcrumb-divider-color: rgba(255,255,255,0.5);">
+                            <li class="breadcrumb-item"><a href="../../../index.html" class="text-white-50">Inicio</a></li>
+                            <li class="breadcrumb-item"><a href="../../../cursos/matematica-7basico.html" class="text-white-50">7 Basico</a></li>
+                            <li class="breadcrumb-item active text-white">Unidad 4</li>
+                        </ol>
+                    </nav>
+                    <h1 class="display-6 fw-bold mb-2">
+                        <i class="bi bi-4-circle-fill me-2"></i>Unidad 4: Datos y Azar
+                    </h1>
+                    <p class="lead opacity-90 mb-3">Estadistica descriptiva, graficos, frecuencias y probabilidades</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge bg-white text-success topic-badge">
+                            <i class="bi bi-people me-1"></i>Poblacion y Muestra
+                        </span>
+                        <span class="badge bg-white text-success topic-badge">
+                            <i class="bi bi-bar-chart me-1"></i>Graficos Estadisticos
+                        </span>
+                        <span class="badge bg-white text-success topic-badge">
+                            <i class="bi bi-dice-5 me-1"></i>Probabilidades
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                    <div class="bg-white bg-opacity-10 rounded p-3">
+                        <div class="row text-center g-2">
+                            <div class="col-4">
+                                <h3 class="mb-0 fw-bold" id="count-guias">17</h3>
+                                <small class="opacity-75">Guias</small>
+                            </div>
+                            <div class="col-4">
+                                <h3 class="mb-0 fw-bold" id="count-vid">2</h3>
+                                <small class="opacity-75">Videos</small>
+                            </div>
+                            <div class="col-4">
+                                <h3 class="mb-0 fw-bold" id="count-apps">1</h3>
+                                <small class="opacity-75">Apps</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="card mb-4"><div class="card-header bg-danger text-white"><h5 class="mb-0"><i class="bi bi-collection-play me-2"></i>Recursos Multimedia</h5></div><div class="card-body"><div class="row" id="multimedia-content"></div></div></div>
-        <div class="card"><div class="card-header bg-success text-white d-flex justify-content-between align-items-center"><h5 class="mb-0"><i class="bi bi-journal-text me-2"></i>Guías y Solucionarios</h5><input type="text" class="form-control form-control-sm w-auto" placeholder="Buscar..." id="search-input"></div><div class="card-body p-0"><div class="list-group list-group-flush" id="guias-list"></div></div></div>
     </div>
+
+    <div class="container py-4">
+        <!-- Descripcion del contenido -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body">
+                <h5 class="card-title"><i class="bi bi-info-circle me-2 text-primary"></i>Contenido de la Unidad</h5>
+                <p class="card-text text-muted">
+                    En esta unidad aprenderas sobre <strong>poblacion y muestra</strong>, variables estadisticas y
+                    frecuencias absolutas y relativas. Construiras e interpretaras <strong>graficos estadisticos</strong>
+                    como barras, lineas y sectores circulares. Finalmente, exploraras el mundo del <strong>azar y las
+                    probabilidades</strong>, incluyendo experimentos aleatorios y diagramas de arbol.
+                </p>
+                <div class="row g-3 mt-2">
+                    <div class="col-md-4">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            <small>Tablas de frecuencias</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            <small>Graficos estadisticos</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            <small>Calculo de probabilidades</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recursos Multimedia -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-header bg-white border-0 py-3">
+                <h5 class="mb-0"><i class="bi bi-collection-play text-danger me-2"></i>Recursos Multimedia</h5>
+            </div>
+            <div class="card-body">
+                <div class="row g-4">
+                    <!-- Videos -->
+                    <div class="col-lg-6">
+                        <h6 class="text-danger mb-3"><i class="bi bi-camera-video me-2"></i>Videos Educativos</h6>
+                        <div id="videos-list"></div>
+                    </div>
+                    <!-- Apps -->
+                    <div class="col-lg-6">
+                        <h6 class="text-info mb-3"><i class="bi bi-laptop me-2"></i>Aplicaciones Interactivas</h6>
+                        <div id="apps-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guias y Solucionarios -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-header bg-white border-0 py-3">
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+                    <h5 class="mb-0"><i class="bi bi-journal-text me-2" style="color: #059669;"></i>Guias y Solucionarios</h5>
+                    <input type="text" class="form-control form-control-sm" style="max-width: 250px;" placeholder="Buscar guia..." id="search-input">
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <div class="list-group list-group-flush" id="guias-list"></div>
+            </div>
+        </div>
+
+        <!-- Leyenda -->
+        <div class="card border-0 bg-light">
+            <div class="card-body py-3">
+                <h6 class="mb-2"><i class="bi bi-lightbulb me-2"></i>Informacion</h6>
+                <p class="text-muted small mb-0">
+                    Cada guia incluye su solucionario correspondiente. Los videos estan disponibles para reproducir en linea o descargar.
+                    Las aplicaciones interactivas se abren en una nueva ventana.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1"><i class="bi bi-mortarboard-fill me-2"></i>Prof. Sergio Seguel</p>
+            <small class="text-secondary">Liceo Rios de Chile, Lirquen - Ano Escolar 2026</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        const guias = ["01_Descubriendo_poblacion_muestra.pdf.pdf","02_Poblacion_y_muestra.pdf.pdf","03_Variable_estadistica.pdf","04_Frecuencia_absoluta.pdf.pdf","05_Frecuencia_realtiva.pdf","06_Tablas_frecuencias_aplicaciones.pdf.pdf","07_Grafico_de_barras.pdf","08_Grafico_de_lineas.pdf","09_Grafico_sector_circular.pdf.pdf","10_Que_grafico_usar.pdf","11_Trabajo_grupal_encuesta.pdf","12_Experimentos_aleatorios.pdf","13_Probabilidades_frecuencia_relativa.pdf","14_Calculo_de_probabilidades.pdf.pdf","15_Diagrama_de_arbol.pdf","16_Comparacion_de_probabilidades.pdf","17_Awarkuden.pdf"];
-        const videos = ["U4_Video02_InteligenciaArtificial.mp4","U4_Video04_Origami.mp4"];
-        const apps = ["01_App01_MapasMentales.html"];
-        document.getElementById('count-guias').textContent = guias.length;
-        document.getElementById('count-sol').textContent = guias.length;
-        document.getElementById('count-vid').textContent = videos.length;
-        document.getElementById('count-apps').textContent = apps.length;
-        const mc = document.getElementById('multimedia-content');
-        let h = '';
-        if (videos.length) { h += '<div class="col-md-6"><h6 class="text-danger mb-3"><i class="bi bi-camera-video me-2"></i>Videos</h6>'; videos.forEach(v => { h += '<div class="multimedia-item d-flex justify-content-between align-items-center"><span><i class="bi bi-play-circle text-danger me-2"></i>'+v.replace('.mp4','').replace(/_/g,' ')+'</span><a href="videos/'+v+'" class="btn btn-sm btn-outline-danger" download><i class="bi bi-download"></i></a></div>'; }); h += '</div>'; }
-        if (apps.length) { h += '<div class="col-md-6"><h6 class="text-info mb-3"><i class="bi bi-laptop me-2"></i>Aplicaciones Interactivas</h6>'; apps.forEach(a => { h += '<div class="multimedia-item d-flex justify-content-between align-items-center"><span><i class="bi bi-laptop text-info me-2"></i>'+a.replace('.html','').replace(/_/g,' ')+'</span><a href="apps/'+a+'" class="btn btn-sm btn-outline-info"><i class="bi bi-play me-1"></i>Abrir</a></div>'; }); h += '</div>'; }
-        mc.innerHTML = h || '<p class="text-muted">No hay recursos multimedia.</p>';
-        const list = document.getElementById('guias-list');
-        guias.forEach(g => { 
-            const name = g.replace(/\.pdf$/i,'').replace(/\.pdf$/i,'').replace(/_/g,' '); 
-            const sol = g.replace(/\.pdf$/i,'').replace(/\.pdf$/i,'') + '_SOL.pdf';
-            list.innerHTML += '<div class="list-group-item activity-row" data-name="'+name.toLowerCase()+'"><div><strong>'+name+'</strong></div><div class="btn-group"><a href="guias/'+g+'" class="btn btn-sm btn-success" download><i class="bi bi-file-earmark-text me-1"></i>Guía</a><a href="solucionario/'+sol+'" class="btn btn-sm btn-outline-success" download><i class="bi bi-check2-circle me-1"></i>Solución</a></div></div>'; 
+        const guias = [
+            {archivo: "01_Descubriendo_poblacion_muestra.pdf.pdf", descripcion: "Descubriendo poblacion y muestra"},
+            {archivo: "02_Poblacion_y_muestra.pdf.pdf", descripcion: "Conceptos de poblacion y muestra"},
+            {archivo: "03_Variable_estadistica.pdf", descripcion: "Variable estadistica y sus tipos"},
+            {archivo: "04_Frecuencia_absoluta.pdf.pdf", descripcion: "Frecuencia absoluta y su calculo"},
+            {archivo: "05_Frecuencia_realtiva.pdf", descripcion: "Frecuencia relativa y porcentual"},
+            {archivo: "06_Tablas_frecuencias_aplicaciones.pdf.pdf", descripcion: "Tablas de frecuencias y sus aplicaciones"},
+            {archivo: "07_Grafico_de_barras.pdf", descripcion: "Construccion e interpretacion de graficos de barras"},
+            {archivo: "08_Grafico_de_lineas.pdf", descripcion: "Graficos de lineas para datos continuos"},
+            {archivo: "09_Grafico_sector_circular.pdf.pdf", descripcion: "Graficos de sectores circulares"},
+            {archivo: "10_Que_grafico_usar.pdf", descripcion: "Criterios para elegir el tipo de grafico"},
+            {archivo: "11_Trabajo_grupal_encuesta.pdf", descripcion: "Trabajo grupal: Realizando una encuesta"},
+            {archivo: "12_Experimentos_aleatorios.pdf", descripcion: "Experimentos aleatorios y espacio muestral"},
+            {archivo: "13_Probabilidades_frecuencia_relativa.pdf", descripcion: "Probabilidades y frecuencia relativa"},
+            {archivo: "14_Calculo_de_probabilidades.pdf.pdf", descripcion: "Calculo de probabilidades"},
+            {archivo: "15_Diagrama_de_arbol.pdf", descripcion: "Diagrama de arbol para eventos compuestos"},
+            {archivo: "16_Comparacion_de_probabilidades.pdf", descripcion: "Comparacion de probabilidades"},
+            {archivo: "17_Awarkuden.pdf", descripcion: "Awarkuden: Juego mapuche y probabilidades"}
+        ];
+
+        const videos = [
+            {archivo: "U4_Video02_InteligenciaArtificial.mp4", titulo: "Video 2: Inteligencia Artificial"},
+            {archivo: "U4_Video04_Origami.mp4", titulo: "Video 4: Origami y Matematicas"}
+        ];
+
+        const apps = [
+            {archivo: "01_App01_MapasMentales.html", titulo: "App 1: Mapas Mentales"}
+        ];
+
+        // Renderizar videos
+        const videosList = document.getElementById('videos-list');
+        videos.forEach(v => {
+            videosList.innerHTML += `
+                <div class="video-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-play-circle text-danger me-2 fs-5"></i>
+                        <span>${v.titulo}</span>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-sm btn-outline-danger" onclick="reproducirVideo('videos/${v.archivo}')" title="Reproducir">
+                            <i class="bi bi-play-fill"></i>
+                        </button>
+                        <a href="videos/${v.archivo}" class="btn btn-sm btn-danger" download title="Descargar">
+                            <i class="bi bi-download"></i>
+                        </a>
+                    </div>
+                </div>
+            `;
         });
-        document.getElementById('search-input').addEventListener('input', e => { document.querySelectorAll('.activity-row').forEach(r => r.style.display = r.dataset.name.includes(e.target.value.toLowerCase()) ? '' : 'none'); });
+
+        // Renderizar apps
+        const appsList = document.getElementById('apps-list');
+        apps.forEach(a => {
+            appsList.innerHTML += `
+                <div class="app-item d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-laptop text-info me-2 fs-5"></i>
+                        <span>${a.titulo}</span>
+                    </div>
+                    <a href="apps/${a.archivo}" class="btn btn-sm btn-info text-white" target="_blank">
+                        <i class="bi bi-box-arrow-up-right me-1"></i>Abrir
+                    </a>
+                </div>
+            `;
+        });
+
+        // Renderizar guias
+        const guiasList = document.getElementById('guias-list');
+        function renderGuias(filtro = '') {
+            guiasList.innerHTML = '';
+            guias.forEach((g, index) => {
+                const nombre = g.archivo.replace(/\.pdf$/i,'').replace(/\.pdf$/i,'').replace(/_/g,' ');
+                const solArchivo = g.archivo.replace(/\.pdf$/i,'').replace(/\.pdf$/i,'') + '_SOL.pdf';
+
+                if (filtro && !nombre.toLowerCase().includes(filtro.toLowerCase()) && !g.descripcion.toLowerCase().includes(filtro.toLowerCase())) {
+                    return;
+                }
+
+                guiasList.innerHTML += `
+                    <div class="list-group-item guia-row" data-name="${nombre.toLowerCase()}">
+                        <div class="flex-grow-1">
+                            <strong>${nombre}</strong>
+                            <small class="text-muted d-block">${g.descripcion}</small>
+                        </div>
+                        <div class="btn-group ms-2">
+                            <a href="guias/${g.archivo}" class="btn btn-sm" style="background:#059669;color:white" download title="Descargar Guia">
+                                <i class="bi bi-file-earmark-pdf me-1"></i>Guia
+                            </a>
+                            <a href="solucionario/${solArchivo}" class="btn btn-sm btn-outline-success" download title="Descargar Solucion">
+                                <i class="bi bi-check2-circle me-1"></i>Solucion
+                            </a>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+        renderGuias();
+
+        // Busqueda
+        document.getElementById('search-input').addEventListener('input', e => {
+            renderGuias(e.target.value);
+        });
+
+        // Funcion para reproducir video en modal
+        function reproducirVideo(src) {
+            const modal = document.createElement('div');
+            modal.innerHTML = `
+                <div class="modal fade" id="videoModal" tabindex="-1">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Reproductor de Video</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body p-0">
+                                <video controls autoplay class="w-100">
+                                    <source src="${src}" type="video/mp4">
+                                    Tu navegador no soporta el elemento de video.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+            const videoModal = new bootstrap.Modal(document.getElementById('videoModal'));
+            videoModal.show();
+            document.getElementById('videoModal').addEventListener('hidden.bs.modal', function () {
+                modal.remove();
+            });
+        }
     </script>
-<footer class="bg-dark text-white py-4 mt-5">
-    <div class="container text-center">
-        <p class="mb-1"><i class="bi bi-mortarboard-fill me-2"></i>Prof. Sergio Seguel</p>
-        <small class="text-secondary">Liceo Rios de Chile, Lirquen - Ano Escolar 2026</small>
-    </div>
-</footer>
 </body>
 </html>
